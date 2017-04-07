@@ -14,6 +14,7 @@ class ListItem extends Component {
   }
   renderDescription() {
     // Actions.pageTwo({text: 'hello world!'})
+    console.log(this.props)
     const { selected } = this.props;
     if (selected) {
     /*Pass this data to the next screen*/
@@ -23,6 +24,9 @@ class ListItem extends Component {
         <Text>{this.props.item.data.author}</Text>
       );
     };
+  }
+  goToSelectedItemPage(id) {
+    this.props.selectItem(id);
   }
   constructor(props){
     super()
@@ -40,7 +44,6 @@ class ListItem extends Component {
               {author}
             </Text>
         </CardSection>
-        {this.renderDescription()}
     </View>
     </TouchableWithoutFeedback>
     
