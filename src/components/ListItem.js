@@ -12,38 +12,43 @@ class ListItem extends Component {
   componentWillUpdate() {
     LayoutAnimation.spring();
   }
-  renderDescription() {
-    // Actions.pageTwo({text: 'hello world!'})
-    console.log(this.props)
-    const { selected } = this.props;
-    if (selected) {
-    /*Pass this data to the next screen*/
-      console.log(this.props.item);
 
-      return (
-        <Text>{this.props.item.data.author}</Text>
-      );
-    };
-  }
-  goToSelectedItemPage(id) {
-    this.props.selectItem(id);
+  goToSelectedItemPage(data) {
+    console.log(data);
+    Actions.selectedItem(data);
   }
   constructor(props){
     super()
   }
   render() {
     const { titleStyle } = styles;
-    const { id, author } = this.props.item.data
+    const { id, author, thumbnail } = this.props.item.data;
+    const { data } = this.props.item;
+    const {
+      thumbnailStyle, 
+      headerContentStyle,
+      thumbnailContainerStyle,
+      headerTextStyle,
+      imageStyle
+    } = styles;    
     return (
     <TouchableWithoutFeedback
-      onPress={() => this.props.selectItem(id)}
+      onPress={() => this.goToSelectedItemPage(data)}
     >
       <View>
+      <Card>
         <CardSection>
-            <Text style={  titleStyle }>
-              {author}
-            </Text>
+        <View>
+          <Image 
+          style={ thumbnailStyle }
+          source={{uri: thumbnail}}
+          />
+        </View>        
+          <Text style={  titleStyle }>
+            {author}
+          </Text>
         </CardSection>
+      </Card>
     </View>
     </TouchableWithoutFeedback>
     
@@ -51,12 +56,6 @@ class ListItem extends Component {
   }
 }
 
-const styles = {
-  titleStyle: {
-    fontSize: 18, 
-    paddingLeft: 15
-  }
-};
 
 const mapStateToProps = (state, ownProps) => {
   const selected = state.selectedItemId === ownProps.item.data.id
@@ -66,3 +65,31 @@ const mapStateToProps = (state, ownProps) => {
 
 export default connect(mapStateToProps, actions)(ListItem);
 
+const styles = {
+  titleStyle: {
+    fontSize: 18, 
+    paddingLeft: 15
+  },  
+  headerContentStyle: {
+    flexDirection: 'column',
+    justifyContent: 'space-around'
+  },
+  headerTextStyle: {
+    fontSize: 18
+  },
+  thumbnailStyle: {
+    height: 50,
+    width: 50
+  },
+  thumbnailContainerStyle: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginLeft: 10,
+    marginRight: 10
+  },
+  imageStyle: {
+    height: 300,
+    flex: 1,
+    width: null
+  }
+}

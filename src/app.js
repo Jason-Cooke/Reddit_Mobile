@@ -5,10 +5,9 @@ import { createStore } from 'redux';
 import reducers from './reducers';
 import {View, Text} from 'react-native'
 import PageOne from './PageOne';
-import PageTwo from './PageTwo';
+import SelectedItem from './SelectedItem';
 
 import ItemsList from './components/ItemsList';
-import SelectedItem from './components/SelectedItem';
 
 export default class App extends Component {
   render() {
@@ -16,8 +15,8 @@ export default class App extends Component {
     <Provider store={createStore(reducers)}>    
       <Router>
         <Scene key="root">
-          <Scene key="pageOne" component={ItemsList} title="PageOne" initial={true} />
-          <Scene key="pageTwo" component={PageTwo} title="PageTwo" />
+          <Scene key="mainScreen" component={ItemsList} title="ItemList" initial={true} />
+          <Scene key="selectedItem" component={SelectedItem} title="SelectedItem" />
         </Scene>
       </Router>
     </Provider>
