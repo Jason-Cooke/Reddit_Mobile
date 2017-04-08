@@ -14,11 +14,11 @@ export default class SelectedItem extends Component {
     } = styles;
     
     return (
-      <Card style={ aligner }>     
+      <Card>     
         <CardSection> 
           <View>
             <Image 
-            style={ thumbnailStyle }
+            style={ imageStyle }
             source={{uri: thumbnail}}
             />
           </View>
@@ -50,7 +50,7 @@ const styles = {
   imageStyle: {
     height: 300,
     flex: 1,
-    width: null
+    width: 300
   },
   aligner: {
     flex: 1,
