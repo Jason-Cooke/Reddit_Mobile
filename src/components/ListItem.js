@@ -28,7 +28,7 @@ class ListItem extends Component {
     } = styles;    
     return (
     <TouchableWithoutFeedback
-      onPress={() => this.goToSelectedItemPage(data)}
+      onPress={ () => this.goToSelectedItemPage(data) }
     >
       <View>
       <Card>
@@ -39,9 +39,9 @@ class ListItem extends Component {
         />
       </CardSection>        
         <CardSection>
-          <View style={headerContentStyle}>
+          <View style={ headerContentStyle }>
             <Text 
-              numberOfLines={2} 
+              numberOfLines={ 2 } 
               style={ headerTextStyle }>{ title }
             </Text>   
             <Text style={{fontSize: 10}}>{'(' + domain + ')'}</Text>     
@@ -49,13 +49,13 @@ class ListItem extends Component {
         </CardSection>
         <CardSection>
           <View>
-            <Text style={{fontSize: 12}}> Submitted by {author} {timeDifference(created_utc)} to {subreddit_name_prefixed}</Text>
+            <Text style={{fontSize: 12}}> Submitted by { author } { timeDifference(created_utc) } to { subreddit_name_prefixed }</Text>
           </View>
         </CardSection>  
         <CardSection>      
             <Text style={ articleDetails }> Upvotes: { ups.toLocaleString() } |</Text>
             <Text style={ articleDetails }> Downvotes: { downs.toLocaleString() } |</Text>              
-            <Text style={ articleDetails }> Comments: {num_comments.toLocaleString()}</Text>
+            <Text style={ articleDetails }> Comments: { num_comments.toLocaleString() }</Text>
         </CardSection>
       </Card>
     </View>
