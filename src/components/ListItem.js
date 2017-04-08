@@ -12,7 +12,6 @@ import { CardSection, Card, Button } from './common';
 /*Refactor to use Touchable opacity instead of touchable without feedback */
 class ListItem extends Component {
   goToSelectedItemPage(data) {
-    console.log(data,' being passed')
     Actions.selectedItem(data);
   }
   render() {
