@@ -35,7 +35,7 @@ class ListItem extends Component {
       <Card>
       <CardSection>
         <Image 
-          source={{ uri: thumbnail }}
+          source={{ uri: url }}
           style={ imageStyle } 
         />
       </CardSection>        

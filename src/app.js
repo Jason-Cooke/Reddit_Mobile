@@ -14,7 +14,7 @@ export default class App extends Component {
     <Provider store={createStore(reducers)}>    
       <Router>
         <Scene key="root">
-          <Scene key="mainScreen" component={ItemsList} title="ItemList" initial={true} />
+          <Scene key="mainScreen" component={ItemsList} title="Articles" initial={true} />
           <Scene key="selectedItem" component={SelectedItem} title="SelectedItem" />
         </Scene>
       </Router>

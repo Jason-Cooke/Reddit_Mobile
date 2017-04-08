@@ -5,8 +5,7 @@ import timeDifference from './components/helpers';
 
 export default class SelectedItem extends Component {
   render() {
-    const { title, author, thumbnail, created_utc, num_comments, ups, downs, url, domain, subreddit_name_prefixed, subreddit } = this.props;
-    console.log(created_utc);
+    const { title, author, created_utc, num_comments, ups, downs, url, domain, subreddit_name_prefixed, subreddit } = this.props;
     const {
       thumbnailStyle, 
       headerContentStyle,
@@ -14,43 +13,38 @@ export default class SelectedItem extends Component {
       headerTextStyle,
       imageStyle,
       aligner,
-      articleDetails
+      articleDetails,
+      linkDetails
     } = styles;
     return (
       <View>
         <Card>
           <CardSection>
             <Image
-              source={{uri: thumbnail}}
+              source={{uri: url}}
               style={ imageStyle }
             />
           </CardSection>
           <CardSection>
-            <Text style={headerTextStyle}>
-              { title }
-            </Text>            
+            <Text style={headerTextStyle}> { title } </Text>            
           </CardSection>
           <CardSection style={headerContentStyle}>
-            <Text>Written by {author} {timeDifference(created_utc)} to {subreddit_name_prefixed}</Text>
+            <Text> Written by {author} {timeDifference(created_utc)} to {subreddit_name_prefixed}</Text>
             <Text></Text>
-          </CardSection>
-          <CardSection>      
+          </CardSection >
+          <CardSection style={headerContentStyle}>
+            <Text style={ articleDetails }> Subreddit: {subreddit} |</Text>
+            <Text style={ linkDetails }
+              onPress={() => Linking.openURL('http://' + domain)}
+            > { domain }  </Text>
+          </CardSection>          
+          <CardSection style={headerContentStyle}>      
               <Text style={ articleDetails }> Upvotes: { ups.toLocaleString() } |</Text>
               <Text style={ articleDetails }> Downvotes: { downs.toLocaleString() } |</Text>              
               <Text style={ articleDetails }> Comments: {num_comments.toLocaleString()} |</Text>
           </CardSection>
           <CardSection>
-            <Text style={ articleDetails }>
-              Subreddit: {subreddit} | 
-            </Text>
-            <Text style={ articleDetails }
-              onPress={() => Linking.openURL('http://' + domain)}
-            > { domain }  </Text>
-          </CardSection>          
-          <CardSection>
-          <Button onPress={() => Linking.openURL(url)}>
-            Go to Article
-          </Button>
+          <Button onPress={() => Linking.openURL(url)}> Read Full Article </Button>
       </CardSection>
         </Card>
         
@@ -65,7 +59,7 @@ const styles = {
     justifyContent: 'space-around'
   },
   headerTextStyle: {
-    fontSize: 18,
+    fontSize: 19,
     fontWeight: 'bold',
   },
   thumbnailStyle: {
@@ -93,5 +87,9 @@ const styles = {
   },
   articleDetails: {
     fontSize: 12
+  },
+  linkDetails: {
+    color: '#0000ff',
+    fontSize: 13
   }
 }
