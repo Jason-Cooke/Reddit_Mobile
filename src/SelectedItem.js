@@ -5,7 +5,7 @@ import timeDifference from './components/helpers';
 
 export default class SelectedItem extends Component {
   render() {
-    const { title, author, thumbnail, created_utc, num_comments, ups, downs, url, domain, subreddit_name_prefixed } = this.props;
+    const { title, author, thumbnail, created_utc, num_comments, ups, downs, url, domain, subreddit_name_prefixed, subreddit } = this.props;
     console.log(created_utc);
     const {
       thumbnailStyle, 
@@ -19,7 +19,6 @@ export default class SelectedItem extends Component {
     return (
       <View>
         <Card>
-          <Text>{author}</Text>
           <CardSection>
             <Image
               source={{uri: thumbnail}}
@@ -27,6 +26,11 @@ export default class SelectedItem extends Component {
             />
           </CardSection>
           <CardSection>
+            <Text style={headerTextStyle}>
+              { title }
+            </Text>            
+          </CardSection>
+          <CardSection style={headerContentStyle}>
             <Text>Written by {author} {timeDifference(created_utc)} to {subreddit_name_prefixed}</Text>
             <Text></Text>
           </CardSection>
@@ -34,8 +38,15 @@ export default class SelectedItem extends Component {
               <Text style={ articleDetails }> Upvotes: { ups.toLocaleString() } |</Text>
               <Text style={ articleDetails }> Downvotes: { downs.toLocaleString() } |</Text>              
               <Text style={ articleDetails }> Comments: {num_comments.toLocaleString()} |</Text>
-              <Text style={ articleDetails }> {'(' + domain + ')'}</Text>
           </CardSection>
+          <CardSection>
+            <Text style={ articleDetails }>
+              Subreddit: {subreddit} | 
+            </Text>
+            <Text style={ articleDetails }
+              onPress={() => Linking.openURL('http://' + domain)}
+            > { domain }  </Text>
+          </CardSection>          
           <CardSection>
           <Button onPress={() => Linking.openURL(url)}>
             Go to Article
@@ -54,7 +65,8 @@ const styles = {
     justifyContent: 'space-around'
   },
   headerTextStyle: {
-    fontSize: 18
+    fontSize: 18,
+    fontWeight: 'bold',
   },
   thumbnailStyle: {
     height: 100,
@@ -67,7 +79,7 @@ const styles = {
     marginRight: 10
   },
   imageStyle: {
-    height: 200,
+    height: 300,
     flex: 1,
     width: 300
   },
@@ -80,6 +92,6 @@ const styles = {
     width: 200
   },
   articleDetails: {
-    fontSize: 10
+    fontSize: 12
   }
 }
