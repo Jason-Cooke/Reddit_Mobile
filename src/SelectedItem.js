@@ -1,30 +1,49 @@
 import React, { Component } from 'react';
-import { View, Text, Image } from 'react-native';
-import { Card, CardSection, Header } from './components/common';
+import { View, Text, Image, Linking } from 'react-native';
+import { Card, CardSection, Header, Button } from './components/common';
+import timeDifference from './components/helpers';
+
 export default class SelectedItem extends Component {
   render() {
-    const { title, author, thumbnail } = this.props;
+    const { title, author, thumbnail, created_utc, num_comments, ups, downs, url, domain, subreddit_name_prefixed } = this.props;
+    console.log(created_utc);
     const {
       thumbnailStyle, 
       headerContentStyle,
       thumbnailContainerStyle,
       headerTextStyle,
       imageStyle,
-      aligner
+      aligner,
+      articleDetails
     } = styles;
-    
     return (
-      <Card>     
-        <CardSection> 
-          <View>
-            <Image 
-            style={ imageStyle }
-            source={{uri: thumbnail}}
+      <View>
+        <Card>
+          <Text>{author}</Text>
+          <CardSection>
+            <Image
+              source={{uri: thumbnail}}
+              style={ imageStyle }
             />
-          </View>
-
-        </CardSection>
-      </Card>
+          </CardSection>
+          <CardSection>
+            <Text>Written by {author} {timeDifference(created_utc)} to {subreddit_name_prefixed}</Text>
+            <Text></Text>
+          </CardSection>
+          <CardSection>      
+              <Text style={ articleDetails }> Upvotes: { ups.toLocaleString() } |</Text>
+              <Text style={ articleDetails }> Downvotes: { downs.toLocaleString() } |</Text>              
+              <Text style={ articleDetails }> Comments: {num_comments.toLocaleString()} |</Text>
+              <Text style={ articleDetails }> {'(' + domain + ')'}</Text>
+          </CardSection>
+          <CardSection>
+          <Button onPress={() => Linking.openURL(url)}>
+            Go to Article
+          </Button>
+      </CardSection>
+        </Card>
+        
+      </View>
     )
   }
 }
@@ -48,7 +67,7 @@ const styles = {
     marginRight: 10
   },
   imageStyle: {
-    height: 300,
+    height: 200,
     flex: 1,
     width: 300
   },
@@ -59,5 +78,8 @@ const styles = {
     justifyContent: 'center',
     height: 200,
     width: 200
+  },
+  articleDetails: {
+    fontSize: 10
   }
 }

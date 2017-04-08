@@ -11,20 +11,13 @@ import { CardSection, Card, Button } from './common';
 /* Use ComponentWillMount LayourAnimation for transition */
 /*Refactor to use Touchable opacity instead of touchable without feedback */
 class ListItem extends Component {
-  componentWillUpdate() {
-    LayoutAnimation.spring();
-  }
-
   goToSelectedItemPage(data) {
-
+    console.log(data,' being passed')
     Actions.selectedItem(data);
-  }
-  constructor(props){
-    super()
   }
   render() {
     const { titleStyle } = styles;
-    const { id, author, thumbnail, title, ups, num_comments, domain, created_utc } = this.props.item.data;
+    const { url, id, author, thumbnail, title, ups, num_comments, domain, created_utc, downs, subreddit_name_prefixed } = this.props.item.data;
     const { data } = this.props.item;
     const {
       thumbnailStyle, 
@@ -57,11 +50,12 @@ class ListItem extends Component {
         </CardSection>
         <CardSection>
           <View>
-            <Text style={{fontSize: 12}}> Submitted by {author} {timeDifference(created_utc)}</Text>
+            <Text style={{fontSize: 12}}> Submitted by {author} {timeDifference(created_utc)} to {subreddit_name_prefixed}</Text>
           </View>
         </CardSection>  
         <CardSection>      
             <Text style={ articleDetails }> Upvotes: { ups.toLocaleString() } |</Text>
+            <Text style={ articleDetails }> Downvotes: { downs.toLocaleString() } |</Text>              
             <Text style={ articleDetails }> Comments: {num_comments.toLocaleString()}</Text>
         </CardSection>
       </Card>
