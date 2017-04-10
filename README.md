@@ -1,10 +1,10 @@
 # Reddit_Mobile
-#Installation
+# Installation
 $git clone https://github.com/aarboleda1/Reddit_Mobile.git
 $cd ./Reddit_Mobile
 $npm install
-#Usage
-#Milestones and Tasks
+# Usage
+# Milestones and Tasks
 - [x] Use Redux.
 - [x] Create a main screen that fetches from Reddit’s API (https://www.reddit.com/.json) and displays the basic content (author, title, thumbnail, up votes, etc) in a list.
 - [x] Users should be able to pull to refresh the list.
