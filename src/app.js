@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import { Router, Scene } from 'react-native-router-flux';
+
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
+import { createLogger } from 'redux-logger';
+import ReduxThunk from 'redux-thunk';
+
 import reducers from './reducers';
 import {View, Text} from 'react-native'
 
@@ -10,8 +14,10 @@ import ItemsList from './components/ItemsList';
 
 export default class App extends Component {
   render() {
+  // persisted state is the 2nd argument of this 
+  const store = createStore(reducers, {}, applyMiddleware(ReduxThunk, createLogger()));
     return (
-    <Provider store={createStore(reducers)}>    
+    <Provider store={store}>    
       <Router>
         <Scene key="root">
           <Scene key="mainScreen" component={ItemsList} title="Articles" initial={true} />
