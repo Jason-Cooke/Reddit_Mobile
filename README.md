@@ -24,13 +24,6 @@ Reddit Mobile is a mobile version of [reddit](https://www.reddit.com/). View the
 - [x] Be able to store the fetched content locally so that if you relaunch the app, it will display that content first before fetching for new content. I recommend using Redux Persist or AsyncStorage.
 - [x] Works on both iOS and Android.
 
-## Folder Structure
-starting at src - my code
-```
-src
-  - 
-```
-
 ## Troubleshooting
 - Modify fetch-npm-browserify
 - [React native: can't find variable self](http://stackoverflow.com/questions/37544189/react-native-error-cant-find-variable-self)
