@@ -55,6 +55,6 @@ export const validateImage = (thumbnail) => {
     if (hasJpgOrPng) {
         return {uri: thumbnail}
     } else {
-        return require('../images/camera-icon-33.png');
+        return require('../images/reddit.png');
     }
 }

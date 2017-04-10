@@ -6,18 +6,9 @@ import { timeDifference, validateImage } from './components/helpers';
 export default class SelectedItem extends Component {
   render() {
     const { thumbnail, title, author, created_utc, num_comments, ups, downs, url, domain, subreddit_name_prefixed, subreddit } = this.props;
-    const {
-      thumbnailStyle, 
-      headerContentStyle,
-      thumbnailContainerStyle,
-      headerTextStyle,
-      imageStyle,
-      aligner,
-      articleDetails,
-      linkDetails
-    } = styles;
+    const { container, thumbnailStyle, headerContentStyle, thumbnailContainerStyle, headerTextStyle, imageStyle, aligner, articleDetails, linkDetails } = styles;
     return (
-      <View>
+      <View style={ container }>
         <Card>
           <CardSection>
             <Image
@@ -28,9 +19,8 @@ export default class SelectedItem extends Component {
           <CardSection>
             <Text style={headerTextStyle}> { title } </Text>            
           </CardSection>
-          <CardSection style={headerContentStyle}>
-            <Text> Written by {author} {timeDifference(created_utc)} to {subreddit_name_prefixed}</Text>
-            <Text></Text>
+          <CardSection style={ headerContentStyle }>
+            <Text style={ articleDetails }> Written by {author} {timeDifference(created_utc)} to {subreddit_name_prefixed}</Text>
           </CardSection >
           <CardSection style={headerContentStyle}>
             <Text style={ articleDetails }> Subreddit: {subreddit} |</Text>
@@ -46,8 +36,7 @@ export default class SelectedItem extends Component {
           <CardSection>
           <Button onPress={() => Linking.openURL(url)}> Read Full Article </Button>
       </CardSection>
-        </Card>
-        
+        </Card>        
       </View>
     )
   }
@@ -60,7 +49,8 @@ const styles = {
   },
   headerTextStyle: {
     fontSize: 19,
-    fontWeight: 'bold',
+    fontWeight: '600',
+    color: '#657786'
   },
   thumbnailStyle: {
     height: 100,
@@ -86,10 +76,15 @@ const styles = {
     width: 200
   },
   articleDetails: {
-    fontSize: 12
+    fontSize: 12,
+    color: '#657786'
   },
   linkDetails: {
-    color: '#0000ff',
+    color: '#657786',
     fontSize: 13
+  },
+  container: { 
+    flex: 1, 
+    backgroundColor: '#f5f8fa' 
   }
 }

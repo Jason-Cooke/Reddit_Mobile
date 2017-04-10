@@ -7,10 +7,9 @@ import { Spinner } from './common'
 
 import { response } from '../reducers/sample.json' // remove this, sample data 
 
-class ItemsList extends Component {
-  
+class ItemsList extends Component {  
   componentDidMount() {
-    this.props.fetchPosts()
+    this.props.fetchPosts();
   }
 
   renderRow(item) {
@@ -18,9 +17,10 @@ class ItemsList extends Component {
   }
 
   render() {
+    const { container } = styles;
     const { isFetching, fetchPosts } = this.props;
     return(
-      <View style={{ flex: 1 }}>
+      <View style={ container }>
         <View style={{ flex: 1 }}>
         {!isFetching && 
         <ListView
@@ -54,8 +54,10 @@ const mapStateToProps = state => {
 export default connect(mapStateToProps, { fetchPosts })(ItemsList);
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    marginTop: 20,
-  },
+  container: { 
+    flex: 1, 
+    backgroundColor: '#f5f8fa' 
+  }
+  ,
+
 });

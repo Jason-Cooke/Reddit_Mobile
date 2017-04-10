@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, Image, View, TouchableWithoutFeedback, LayoutAnimation }  from 'react-native'
+import { Text, Image, View, TouchableWithoutFeedback, LayoutAnimation, Dimensions }  from 'react-native'
 import { connect } from 'react-redux';
 import { Actions } from 'react-native-router-flux';
 import * as actions from '../actions';
@@ -20,10 +20,13 @@ class ListItem extends Component {
     const { url, id, author, thumbnail, title, ups, num_comments, domain, created_utc, downs, subreddit_name_prefixed } = this.props.item.data;
     const { data } = this.props.item;
     const {
+      postInfo,
       headerContentStyle,
       headerTextStyle,
       imageStyle,
-      articleDetails
+      articleDetails,
+      thumbnailStyle,
+      headerContainerStyle
     } = styles;    
     return (
     <TouchableWithoutFeedback
@@ -32,23 +35,20 @@ class ListItem extends Component {
     <View>
       <Card>
       <CardSection>
-        <Image 
-          source={ validateImage(this.props.item.data.thumbnail) }
-          style={ imageStyle } 
-        />
+        <View style={ headerContainerStyle }>
+          <Text 
+            numberOfLines={ 4 } 
+            style={ headerTextStyle }>{ title }
+          </Text>   
+          <Image 
+            source={ validateImage(this.props.item.data.thumbnail) }
+            style={ thumbnailStyle } 
+          />
+        </View>
       </CardSection>        
         <CardSection>
-          <View style={ headerContentStyle }>
-            <Text 
-              numberOfLines={ 2 } 
-              style={ headerTextStyle }>{ title }
-            </Text>   
-            <Text style={ {fontSize: 10}}>{'(' + domain + ')' }</Text>     
-          </View>
-        </CardSection>
-        <CardSection>
           <View>
-            <Text style={ {fontSize: 12} }> Submitted by { author } { timeDifference(created_utc) } to { subreddit_name_prefixed }</Text>
+            <Text style={ postInfo }> Submitted by { author } { timeDifference(created_utc) } to { subreddit_name_prefixed }</Text>
           </View>
         </CardSection>  
         <CardSection>      
@@ -70,11 +70,12 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 export default connect(mapStateToProps, actions)(ListItem);
-
+const { height, width } = Dimensions.get('window');
 const styles = {
   titleStyle: {
     fontSize: 18, 
-    paddingLeft: 15
+    paddingLeft: 15,
+    color: '#F0F8FF'
   },  
   headerContentStyle: {
     flexDirection: 'column',
@@ -83,14 +84,35 @@ const styles = {
   },
   headerTextStyle: {
     fontSize: 18,
-    fontWeight: 'bold',
+    fontWeight: '600',
+    width: Math.round(width * .66),
+    color: '#657786'
   },
   imageStyle: {
     height: 200,
     flex: 1,
     width: null
   },
+  thumbnailStyle: {
+    height: 80,
+    width: 80,
+    borderRadius: 4
+  },
   articleDetails: {
-    fontSize: 10
+    fontSize: 10,
+    color: '#657786'
+  },
+  headerContainerStyle: {
+    display: 'flex', 
+    flexDirection: 'row', 
+    flex: 1, 
+    justifyContent: 'space-between', 
+    paddingRight: 4, 
+    paddingLeft: 4, 
+    paddingTop: 4
+  },
+  postInfo: {
+    fontSize: 12,
+    color: '#657786'
   }
 }
