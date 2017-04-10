@@ -31,19 +31,7 @@ to learn more about this react-native issue, click [react-native issue](http://s
 Modify fetch-npm-browserify
 http://stackoverflow.com/questions/37544189/react-native-error-cant-find-variable-self
 
-Please directly change this module in node modules, 
-
-node_modules> isomorphic-fetch> fetch-npm-browserify.js file Back:
-var globalObject = typeof self === "undefined" ? global : self;
-module.exports = globalObject.fetch.bind(globalObject);
-//module.exports = fetch;
-
-final product should look like this 
-fetch-npm-browserify.js
-`require('whatwg-fetch');
-var globalObject = typeof self === "undefined" ? global : self;
-module.exports = globalObject.fetch.bind(globalObject);`
-
 # Contributing
 
 # Issues/Todo
+
