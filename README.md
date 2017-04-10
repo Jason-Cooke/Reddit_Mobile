@@ -1,10 +1,12 @@
 # Reddit_Mobile
-# Installation
-$git clone https://github.com/aarboleda1/Reddit_Mobile.git
-$cd ./Reddit_Mobile
-$npm install
-# Usage
-# Milestones and Tasks
+## Installation
+`$git clone https://github.com/aarboleda1/Reddit_Mobile.git`
+`$cd ./Reddit_Mobile`
+`$npm install`
+**Important**
+
+## Usage
+## Milestones and Tasks
 - [x] Use Redux.
 - [x] Create a main screen that fetches from Reddit’s API (https://www.reddit.com/.json) and displays the basic content (author, title, thumbnail, up votes, etc) in a list.
 - [x] Users should be able to pull to refresh the list.
@@ -31,3 +33,7 @@ fetch-npm-browserify.js
 `require('whatwg-fetch');
 var globalObject = typeof self === "undefined" ? global : self;
 module.exports = globalObject.fetch.bind(globalObject);`
+
+# Contributing
+
+# Issues/Todo
