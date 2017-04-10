@@ -7,9 +7,6 @@ Reddit Mobile is a Mobile Application using the reddit API.
 3. `npm install` - install dependencies
 4. `react-native run-ios`
 
-to learn more about this react-native issue, click [react-native issue](http://stackoverflow.com/questions/37544189/react-native-error-cant-find-variable-self)
-5. `$react-native run-ios`
-
 ## Features
 1. Redux
 2. Data persistence using redux-persist AsyncStorage for fast upload upon page refreshal
