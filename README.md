@@ -7,7 +7,7 @@
 
 Bonus Points:
 
-- [ ] Be able to store the fetched content locally so that if you relaunch the app, it will display that content first before fetching for new content. I recommend using Redux Persist or AsyncStorage.
+- [x] Be able to store the fetched content locally so that if you relaunch the app, it will display that content first before fetching for new content. I recommend using Redux Persist or AsyncStorage.
 - [ ] Works on both iOS and Android.
 
 
