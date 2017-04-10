@@ -29,6 +29,7 @@ Reddit Mobile is a mobile version of [reddit](https://www.reddit.com/). View the
 - [React native: can't find variable self](http://stackoverflow.com/questions/37544189/react-native-error-cant-find-variable-self)
 
 ## License
+The content of this repository is licensed under a MIT license.
 [LICENSE](/LICENSE) file.
 
 
