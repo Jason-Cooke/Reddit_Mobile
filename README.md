@@ -5,11 +5,11 @@ Reddit Mobile is a Mobile Application using the reddit API.
 1. `$git clone https://github.com/aarboleda1/Reddit_Mobile.git` - clone repo
 2. `$cd ./Reddit_Mobile`
 3. `npm install` - install dependencies
-4. `react-native run-ios`
+4. `react-native run-ios` or `react-native run-ios`
 
 ## Features
 1. Redux
-2. Data persistence using redux-persist AsyncStorage for fast upload upon page refreshal
+2. Data persistence using `redux-persist` to display that content first before fetching for new content
 3. Routing using react-router-native-flux
 4. Refresh on scroll using RefreshControl
 
