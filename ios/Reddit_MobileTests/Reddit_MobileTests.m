@@ -16,11 +16,11 @@
 #define TIMEOUT_SECONDS 600
 #define TEXT_TO_LOOK_FOR @"Welcome to React Native!"
 
-@interface ReactNativeRouterFluxDemoTests : XCTestCase
+@interface Reddit_MobileTests : XCTestCase
 
 @end
 
-@implementation ReactNativeRouterFluxDemoTests
+@implementation Reddit_MobileTests
 
 - (BOOL)findSubviewInView:(UIView *)view matching:(BOOL(^)(UIView *view))test
 {

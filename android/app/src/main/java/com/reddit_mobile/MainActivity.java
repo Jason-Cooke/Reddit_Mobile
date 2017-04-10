@@ -1,4 +1,4 @@
-package com.reactnativerouterfluxdemo;
+package com.reddit_mobile;
 
 import com.facebook.react.ReactActivity;
 
@@ -10,6 +10,6 @@ public class MainActivity extends ReactActivity {
      */
     @Override
     protected String getMainComponentName() {
-        return "ReactNativeRouterFluxDemo";
+        return "Reddit_Mobile";
     }
 }

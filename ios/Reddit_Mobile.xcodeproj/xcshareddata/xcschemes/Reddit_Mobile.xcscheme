@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "ReactNativeRouterFluxDemo.app"
-               BlueprintName = "ReactNativeRouterFluxDemo"
-               ReferencedContainer = "container:ReactNativeRouterFluxDemo.xcodeproj">
+               BuildableName = "Reddit_Mobile.app"
+               BlueprintName = "Reddit_Mobile"
+               ReferencedContainer = "container:Reddit_Mobile.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "ReactNativeRouterFluxDemoTests.xctest"
-               BlueprintName = "ReactNativeRouterFluxDemoTests"
-               ReferencedContainer = "container:ReactNativeRouterFluxDemo.xcodeproj">
+               BuildableName = "Reddit_MobileTests.xctest"
+               BlueprintName = "Reddit_MobileTests"
+               ReferencedContainer = "container:Reddit_Mobile.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -61,9 +61,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "ReactNativeRouterFluxDemoTests.xctest"
-               BlueprintName = "ReactNativeRouterFluxDemoTests"
-               ReferencedContainer = "container:ReactNativeRouterFluxDemo.xcodeproj">
+               BuildableName = "Reddit_MobileTests.xctest"
+               BlueprintName = "Reddit_MobileTests"
+               ReferencedContainer = "container:Reddit_Mobile.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -71,9 +71,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "ReactNativeRouterFluxDemo.app"
-            BlueprintName = "ReactNativeRouterFluxDemo"
-            ReferencedContainer = "container:ReactNativeRouterFluxDemo.xcodeproj">
+            BuildableName = "Reddit_Mobile.app"
+            BlueprintName = "Reddit_Mobile"
+            ReferencedContainer = "container:Reddit_Mobile.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "ReactNativeRouterFluxDemo.app"
-            BlueprintName = "ReactNativeRouterFluxDemo"
-            ReferencedContainer = "container:ReactNativeRouterFluxDemo.xcodeproj">
+            BuildableName = "Reddit_Mobile.app"
+            BlueprintName = "Reddit_Mobile"
+            ReferencedContainer = "container:Reddit_Mobile.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -113,9 +113,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "ReactNativeRouterFluxDemo.app"
-            BlueprintName = "ReactNativeRouterFluxDemo"
-            ReferencedContainer = "container:ReactNativeRouterFluxDemo.xcodeproj">
+            BuildableName = "Reddit_Mobile.app"
+            BlueprintName = "Reddit_Mobile"
+            ReferencedContainer = "container:Reddit_Mobile.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

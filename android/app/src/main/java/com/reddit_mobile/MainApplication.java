@@ -1,4 +1,4 @@
-package com.reactnativerouterfluxdemo;
+package com.reddit_mobile;
 
 import android.app.Application;
 

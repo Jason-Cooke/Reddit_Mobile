@@ -3,4 +3,4 @@ import App from './src/app';
 
 
 
-AppRegistry.registerComponent('ReactNativeRouterFluxDemo', () => App);
+AppRegistry.registerComponent('Reddit_Mobile', () => App);
