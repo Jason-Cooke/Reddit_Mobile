@@ -1,16 +1,17 @@
 # Reddit_Mobile
 ## Installation
+1. `$git clone https://github.com/aarboleda1/Reddit_Mobile.git` - clone repo
+2. `$cd ./Reddit_Mobile`
+3. `npm install` - install dependencies
+4. Once node_modules are installed, open isomporphic-fetch folder and copy this block of code into the file `fetch-npm-browserfy`
 ```
-$git clone https://github.com/aarboleda1/Reddit_Mobile.git
-$cd ./Reddit_Mobile
-$npm install
-```
-node_modules => isomorphic-fetch => fetch-npm-browserfy.js
-```
-require('whatwg-fetch');
 var globalObject = typeof self === "undefined" ? global : self;
 module.exports = globalObject.fetch.bind(globalObject);
+//module.exports = fetch
 ```
+to learn more about this react-native issue, click [react-native issue](http://stackoverflow.com/questions/37544189/react-native-error-cant-find-variable-self)
+5. `$react-native run-ios`
+
 ## Usage
 ## Milestones and Tasks
 - [x] Use Redux.
