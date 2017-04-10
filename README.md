@@ -1,4 +1,4 @@
-# Reddit_Mobile
+# Reddit Mobile
 Reddit Mobile is a Mobile Application using the reddit API. 
 
 ## Installation
