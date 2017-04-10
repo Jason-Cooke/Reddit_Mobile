@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { View, Text, Image, Linking } from 'react-native';
-import { Card, CardSection, Header, Button } from './components/common';
-import { timeDifference, validateImage } from './components/helpers';
+import { Card, CardSection, Header, Button } from './common';
+import { timeDifference, validateImage } from './helpers';
 
-export default class SelectedItem extends Component {
+export default class SelectedItemclear extends Component {
   render() {
     const { thumbnail, title, author, created_utc, num_comments, ups, downs, url, domain, subreddit_name_prefixed, subreddit } = this.props;
     const { container, thumbnailStyle, headerContentStyle, thumbnailContainerStyle, headerTextStyle, imageStyle, aligner, articleDetails, linkDetails } = styles;

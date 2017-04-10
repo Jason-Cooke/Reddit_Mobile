@@ -8,7 +8,7 @@ import { createLogger } from 'redux-logger';
 import reducers from './reducers';
 import {View, Text, Navigator} from 'react-native'
 
-import SelectedItem from './SelectedItem';
+import SelectedItem from './components/SelectedItem';
 import ItemsList from './components/ItemsList';
 
 export default class App extends Component {
