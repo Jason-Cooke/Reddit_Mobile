@@ -1,5 +1,5 @@
 # Reddit Mobile
-Reddit Mobile is a mobile version of (reddit)[https://www.reddit.com/]. Displaying the mosts popular posts and allowing you to view all information about that post.
+Reddit Mobile is a mobile version of (reddit)[https://www.reddit.com/] . Displaying the mosts popular posts and allowing you to view all information about that post.
 
 ## Installation
 1. `$git clone https://github.com/aarboleda1/Reddit_Mobile.git` - clone repo
