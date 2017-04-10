@@ -22,7 +22,8 @@ class ItemsList extends Component {
     return(
       <View style={{ flex: 1 }}>
         <View style={{ flex: 1 }}>
-        {!isFetching && <ListView
+        {!isFetching && 
+        <ListView
           dataSource={ this.props.items }
           renderRow={ this.renderRow }
           enableEmptySections={ true }

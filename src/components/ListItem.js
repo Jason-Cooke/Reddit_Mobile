@@ -28,7 +28,7 @@ class ListItem extends Component {
     <TouchableWithoutFeedback
       onPress={ () => this.goToSelectedItemPage(data) }
     >
-      <View>
+    <View>
       <Card>
       <CardSection>
         <Image 

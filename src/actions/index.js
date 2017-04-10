@@ -1,6 +1,5 @@
 import fetch from 'isomorphic-fetch';
 
-
 //use redux thunk to return the function;
 export const fetchPosts = () => {
   return (dispatch) => {

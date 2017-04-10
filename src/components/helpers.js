@@ -1,3 +1,8 @@
+/*
+Used to display relative time i.e 
+Input: time post was created
+Output: relative time to now. created => 4 hours ago, 10 minutes ago, 2 months ago
+*/
 const timeDifference = (previous) => {
     current = Date.now();
     previous = previous * 1000;
