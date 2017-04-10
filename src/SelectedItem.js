@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { View, Text, Image, Linking } from 'react-native';
 import { Card, CardSection, Header, Button } from './components/common';
-import timeDifference from './components/helpers';
+import { timeDifference, validateImage } from './components/helpers';
 
 export default class SelectedItem extends Component {
   render() {
-    const { title, author, created_utc, num_comments, ups, downs, url, domain, subreddit_name_prefixed, subreddit } = this.props;
+    const { thumbnail, title, author, created_utc, num_comments, ups, downs, url, domain, subreddit_name_prefixed, subreddit } = this.props;
     const {
       thumbnailStyle, 
       headerContentStyle,
@@ -21,7 +21,7 @@ export default class SelectedItem extends Component {
         <Card>
           <CardSection>
             <Image
-              source={{uri: url}}
+              source={ validateImage(thumbnail) }
               style={ imageStyle }
             />
           </CardSection>

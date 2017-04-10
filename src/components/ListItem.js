@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { Actions } from 'react-native-router-flux';
 import * as actions from '../actions';
 
-import timeDifference from './helpers';
+import { timeDifference, validateImage } from './helpers';
 
 import { CardSection, Card, Button } from './common';
 
@@ -13,7 +13,8 @@ import { CardSection, Card, Button } from './common';
 class ListItem extends Component {
   goToSelectedItemPage(data) {
     Actions.selectedItem(data);
-  }
+  };
+
   render() {
     const { titleStyle } = styles;
     const { url, id, author, thumbnail, title, ups, num_comments, domain, created_utc, downs, subreddit_name_prefixed } = this.props.item.data;
@@ -32,7 +33,7 @@ class ListItem extends Component {
       <Card>
       <CardSection>
         <Image 
-          source={{ uri: thumbnail }}
+          source={ validateImage(this.props.item.data.thumbnail) }
           style={ imageStyle } 
         />
       </CardSection>        
@@ -42,12 +43,12 @@ class ListItem extends Component {
               numberOfLines={ 2 } 
               style={ headerTextStyle }>{ title }
             </Text>   
-            <Text style={{fontSize: 10}}>{'(' + domain + ')'}</Text>     
+            <Text style={ {fontSize: 10}}>{'(' + domain + ')' }</Text>     
           </View>
         </CardSection>
         <CardSection>
           <View>
-            <Text style={{fontSize: 12}}> Submitted by { author } { timeDifference(created_utc) } to { subreddit_name_prefixed }</Text>
+            <Text style={ {fontSize: 12} }> Submitted by { author } { timeDifference(created_utc) } to { subreddit_name_prefixed }</Text>
           </View>
         </CardSection>  
         <CardSection>      
@@ -65,7 +66,6 @@ class ListItem extends Component {
 
 const mapStateToProps = (state, ownProps) => {
   const selected = state.selectedItemId === ownProps.item.data.id
-  // return { selectedItemId: state.selectedItemId };
   return { selected }
 };
 

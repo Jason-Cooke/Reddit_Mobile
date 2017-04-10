@@ -3,7 +3,8 @@ Used to display relative time i.e
 Input: time post was created
 Output: relative time to now. created => 4 hours ago, 10 minutes ago, 2 months ago
 */
-const timeDifference = (previous) => {
+
+export const timeDifference = (previous) => {
     current = Date.now();
     previous = previous * 1000;
     var msPerMinute = 60 * 1000;
@@ -44,4 +45,14 @@ const timeDifference = (previous) => {
     }
 }
 
-export default timeDifference;
+
+export const validateImage = (thumbnail) => {
+    // const { thumbnail } = this.props.item.data;
+    let len = thumbnail.length;
+    let hasJpgOrPng = thumbnail.slice(len - 3, len) === 'jpg' || thumbnail.slice(len - 3, len) === 'png'
+    if (hasJpgOrPng) {
+        return {uri: thumbnail}
+    } else {
+        return require('../images/camera-icon-33.png');
+    }
+}

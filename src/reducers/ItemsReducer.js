@@ -1,5 +1,5 @@
 import response from './sample.json';
-import { REQUEST_POSTS, RECEIVE_POSTS} from '../actions'
+import { REQUEST_POSTS, RECEIVE_POSTS } from '../actions'
 
 
 export default (state = { 
