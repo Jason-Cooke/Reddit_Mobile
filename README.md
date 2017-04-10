@@ -2,11 +2,13 @@
 ## Installation
 ```
 $git clone https://github.com/aarboleda1/Reddit_Mobile.git
-$cd ./Reddit_Mobile
-$npm install
-**Important**
 ```
-
+```
+$cd ./Reddit_Mobile
+```
+```
+$npm install
+```
 ## Usage
 ## Milestones and Tasks
 - [x] Use Redux.
