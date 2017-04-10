@@ -25,9 +25,9 @@ Reddit Mobile is a Mobile Application using the reddit API.
 - [ ] Works on both iOS and Android.
 
 
-# Troubleshooting
+## Troubleshooting
 Modify fetch-npm-browserify
 [React native: can't find variable self](http://stackoverflow.com/questions/37544189/react-native-error-cant-find-variable-self)
 
-# Issues/Todo
+## Issues/Todo
 
