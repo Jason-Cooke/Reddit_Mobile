@@ -28,6 +28,7 @@ Reddit Mobile is a mobile version of [reddit](https://www.reddit.com/). View the
 - Modify fetch-npm-browserify
 - [React native: can't find variable self](http://stackoverflow.com/questions/37544189/react-native-error-cant-find-variable-self)
 
-
+##License
+[LICENSE](/LICENSE) file.
 
 
