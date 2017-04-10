@@ -28,10 +28,9 @@ to learn more about this react-native issue, click [react-native issue](http://s
 - [ ] Works on both iOS and Android.
 
 
+# Troubleshooting
 Modify fetch-npm-browserify
-http://stackoverflow.com/questions/37544189/react-native-error-cant-find-variable-self
-
-# Contributing
+[React native: can't find variable self](http://stackoverflow.com/questions/37544189/react-native-error-cant-find-variable-self)
 
 # Issues/Todo
 
