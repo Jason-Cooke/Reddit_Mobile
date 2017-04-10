@@ -19,9 +19,7 @@ class ListItem extends Component {
     const { url, id, author, thumbnail, title, ups, num_comments, domain, created_utc, downs, subreddit_name_prefixed } = this.props.item.data;
     const { data } = this.props.item;
     const {
-      thumbnailStyle, 
       headerContentStyle,
-      thumbnailContainerStyle,
       headerTextStyle,
       imageStyle,
       articleDetails
@@ -34,7 +32,7 @@ class ListItem extends Component {
       <Card>
       <CardSection>
         <Image 
-          source={{ uri: url }}
+          source={{ uri: thumbnail }}
           style={ imageStyle } 
         />
       </CardSection>        
@@ -86,16 +84,6 @@ const styles = {
   headerTextStyle: {
     fontSize: 18,
     fontWeight: 'bold',
-  },
-  thumbnailStyle: {
-    height: 50,
-    width: 50
-  },
-  thumbnailContainerStyle: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginLeft: 10,
-    marginRight: 10
   },
   imageStyle: {
     height: 200,
