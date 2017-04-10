@@ -1,4 +1,6 @@
 # Reddit_Mobile
+Reddit Mobile is a Mobile Application using the reddit API. 
+
 ## Installation
 1. `$git clone https://github.com/aarboleda1/Reddit_Mobile.git` - clone repo
 2. `$cd ./Reddit_Mobile`
@@ -8,7 +10,12 @@
 to learn more about this react-native issue, click [react-native issue](http://stackoverflow.com/questions/37544189/react-native-error-cant-find-variable-self)
 5. `$react-native run-ios`
 
-## Usage
+## Features
+1. Redux
+2. Data persistence using redux-persist AsyncStorage for fast upload upon page refreshal
+3. Routing using react-router-native-flux
+4. Refresh on scroll using RefreshControl
+
 ## Milestones and Tasks
 - [x] Use Redux.
 - [x] Create a main screen that fetches from Reddit’s API (https://www.reddit.com/.json) and displays the basic content (author, title, thumbnail, up votes, etc) in a list.
