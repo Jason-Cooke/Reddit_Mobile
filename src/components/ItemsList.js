@@ -5,7 +5,6 @@ import ListItem from './ListItem';
 import { fetchPosts } from '../actions'
 import { Spinner } from './common'
 
-import { response } from '../reducers/sample.json' // remove this, sample data 
 
 class ItemsList extends Component {  
   componentDidMount() {
@@ -58,6 +57,4 @@ const styles = StyleSheet.create({
     flex: 1, 
     backgroundColor: '#f5f8fa' 
   }
-  ,
-
 });
