@@ -24,6 +24,12 @@ Reddit Mobile is a Mobile Application using the reddit API.
 - [x] Be able to store the fetched content locally so that if you relaunch the app, it will display that content first before fetching for new content. I recommend using Redux Persist or AsyncStorage.
 - [x] Works on both iOS and Android.
 
+## Folder Structure
+starting at src - my code
+```
+src
+  - 
+```
 
 ## Troubleshooting
 - Modify fetch-npm-browserify
