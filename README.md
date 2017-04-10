@@ -1,9 +1,11 @@
 # Reddit_Mobile
 ## Installation
-`$git clone https://github.com/aarboleda1/Reddit_Mobile.git`
-`$cd ./Reddit_Mobile`
-`$npm install`
+```
+$git clone https://github.com/aarboleda1/Reddit_Mobile.git
+$cd ./Reddit_Mobile
+$npm install
 **Important**
+```
 
 ## Usage
 ## Milestones and Tasks
