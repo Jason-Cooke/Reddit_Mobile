@@ -2,12 +2,14 @@
 ## Installation
 ```
 $git clone https://github.com/aarboleda1/Reddit_Mobile.git
-```
-```
 $cd ./Reddit_Mobile
-```
-```
 $npm install
+```
+node_modules => isomorphic-fetch => fetch-npm-browserfy.js
+```
+require('whatwg-fetch');
+var globalObject = typeof self === "undefined" ? global : self;
+module.exports = globalObject.fetch.bind(globalObject);
 ```
 ## Usage
 ## Milestones and Tasks
@@ -16,7 +18,7 @@ $npm install
 - [x] Users should be able to pull to refresh the list.
 - [x] Clicking on a specific item should transition to a different screen within the app. This screen's content can just simply display the same basic content. Users should be able to go back to lsthe main screen.
 
-Bonus Points:
+**Bonus Points:**
 
 - [x] Be able to store the fetched content locally so that if you relaunch the app, it will display that content first before fetching for new content. I recommend using Redux Persist or AsyncStorage.
 - [ ] Works on both iOS and Android.
