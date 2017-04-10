@@ -1,17 +1,18 @@
 # Reddit_Mobile
+Reddit Mobile is a Mobile Application using the reddit API. 
+
 ## Installation
-```
-$git clone https://github.com/aarboleda1/Reddit_Mobile.git
-$cd ./Reddit_Mobile
-$npm install
-```
-node_modules => isomorphic-fetch => fetch-npm-browserfy.js
-```
-require('whatwg-fetch');
-var globalObject = typeof self === "undefined" ? global : self;
-module.exports = globalObject.fetch.bind(globalObject);
-```
-## Usage
+1. `$git clone https://github.com/aarboleda1/Reddit_Mobile.git` - clone repo
+2. `$cd ./Reddit_Mobile`
+3. `npm install` - install dependencies
+4. `react-native run-ios` or `react-native run-ios`
+
+## Features
+1. Redux
+2. Data persistence using `redux-persist` to display that content first before fetching for new content
+3. Routing using react-router-native-flux
+4. Refresh on scroll using RefreshControl
+
 ## Milestones and Tasks
 - [x] Use Redux.
 - [x] Create a main screen that fetches from Reddit’s API (https://www.reddit.com/.json) and displays the basic content (author, title, thumbnail, up votes, etc) in a list.
@@ -24,22 +25,9 @@ module.exports = globalObject.fetch.bind(globalObject);
 - [ ] Works on both iOS and Android.
 
 
+## Troubleshooting
 Modify fetch-npm-browserify
-http://stackoverflow.com/questions/37544189/react-native-error-cant-find-variable-self
+[React native: can't find variable self](http://stackoverflow.com/questions/37544189/react-native-error-cant-find-variable-self)
 
-Please directly change this module in node modules, 
+## Issues/Todo
 
-node_modules> isomorphic-fetch> fetch-npm-browserify.js file Back:
-var globalObject = typeof self === "undefined" ? global : self;
-module.exports = globalObject.fetch.bind(globalObject);
-//module.exports = fetch;
-
-final product should look like this 
-fetch-npm-browserify.js
-`require('whatwg-fetch');
-var globalObject = typeof self === "undefined" ? global : self;
-module.exports = globalObject.fetch.bind(globalObject);`
-
-# Contributing
-
-# Issues/Todo
