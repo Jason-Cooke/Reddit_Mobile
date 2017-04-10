@@ -22,12 +22,13 @@ Reddit Mobile is a Mobile Application using the reddit API.
 **Bonus Points:**
 
 - [x] Be able to store the fetched content locally so that if you relaunch the app, it will display that content first before fetching for new content. I recommend using Redux Persist or AsyncStorage.
-- [ ] Works on both iOS and Android.
+- [x] Works on both iOS and Android.
 
 
 ## Troubleshooting
-Modify fetch-npm-browserify
-[React native: can't find variable self](http://stackoverflow.com/questions/37544189/react-native-error-cant-find-variable-self)
+- Modify fetch-npm-browserify
+- [React native: can't find variable self](http://stackoverflow.com/questions/37544189/react-native-error-cant-find-variable-self)
 
 ## Issues/Todo
+
 
