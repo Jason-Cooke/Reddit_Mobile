@@ -46,7 +46,7 @@ export const timeDifference = (previous) => {
 }
 
 /*
-Not all data comes back the same
+Not all posts have images - this function determines whether to display a default reddit png or the given png/jpg
 */
 
 export const validateImage = (thumbnail) => {

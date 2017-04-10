@@ -17,10 +17,10 @@ export default class SelectedItem extends Component {
             />
           </CardSection>
           <CardSection>
-            <Text style={headerTextStyle}> { title } </Text>            
+            <Text style={ headerTextStyle }> { title } </Text>            
           </CardSection>
           <CardSection style={ headerContentStyle }>
-            <Text style={ articleDetails }> Written by {author} {timeDifference(created_utc)} to {subreddit_name_prefixed}</Text>
+            <Text style={ articleDetails }> Written by {author} { timeDifference(created_utc) } to { subreddit_name_prefixed }</Text>
           </CardSection >
           <CardSection style={headerContentStyle}>
             <Text style={ articleDetails }> Subreddit: {subreddit} |</Text>
@@ -29,9 +29,9 @@ export default class SelectedItem extends Component {
             > { domain }  </Text>
           </CardSection>          
           <CardSection style={headerContentStyle}>      
-              <Text style={ articleDetails }> Upvotes: { ups.toLocaleString() } |</Text>
-              <Text style={ articleDetails }> Downvotes: { downs.toLocaleString() } |</Text>              
-              <Text style={ articleDetails }> Comments: {num_comments.toLocaleString()} |</Text>
+              <Text style={ articleDetails }> Upvotes: { ups.toLocaleString() } | </Text>
+              <Text style={ articleDetails }> Downvotes: { downs.toLocaleString() } | </Text>              
+              <Text style={ articleDetails }> Comments: { num_comments.toLocaleString() } | </Text>
           </CardSection>
           <CardSection>
           <Button onPress={() => Linking.openURL(url)}> Read Full Article </Button>

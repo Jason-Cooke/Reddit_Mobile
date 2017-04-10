@@ -48,10 +48,10 @@ class ListItem extends Component {
       </CardSection>        
         <CardSection>
           <View>
-            <Text style={ postInfo }> Submitted by { author } { timeDifference(created_utc) } to { subreddit_name_prefixed }</Text>
+            <Text style={ postInfo }> { subreddit_name_prefixed } {' \u2022'} { timeDifference(created_utc) } {' \u2022'} submitted by: { author }</Text>
           </View>
         </CardSection>  
-        <CardSection>      
+        <CardSection> 
             <Text style={ articleDetails }> Upvotes: { ups.toLocaleString() } |</Text>
             <Text style={ articleDetails }> Downvotes: { downs.toLocaleString() } |</Text>              
             <Text style={ articleDetails }> Comments: { num_comments.toLocaleString() }</Text>
@@ -99,7 +99,7 @@ const styles = {
     borderRadius: 4
   },
   articleDetails: {
-    fontSize: 10,
+    fontSize: 11,
     color: '#657786'
   },
   headerContainerStyle: {
