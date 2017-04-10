@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ListView, View, Text, ScrollView, StyleSheet } from 'react-native';
+import { ListView, View, Text, ScrollView, StyleSheet, RefreshControl } from 'react-native';
 import { connect } from 'react-redux';
 import ListItem from './ListItem';
 import { fetchPosts } from '../actions'
@@ -18,7 +18,7 @@ class ItemsList extends Component {
   }
 
   render() {
-    const { isFetching } = this.props;
+    const { isFetching, fetchPosts } = this.props;
     return(
       <View style={{ flex: 1 }}>
         <View style={{ flex: 1 }}>
@@ -27,6 +27,12 @@ class ItemsList extends Component {
           dataSource={ this.props.items }
           renderRow={ this.renderRow }
           enableEmptySections={ true }
+          refreshControl={
+            <RefreshControl
+              refreshing={ isFetching }
+              onRefresh={() => fetchPosts() }
+            />
+          }          
         />}
         </View>
         {isFetching && <View style={{ flex: 1 }}>

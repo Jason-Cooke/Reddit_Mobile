@@ -45,9 +45,11 @@ export const timeDifference = (previous) => {
     }
 }
 
+/*
+Not all data comes back the same
+*/
 
 export const validateImage = (thumbnail) => {
-    // const { thumbnail } = this.props.item.data;
     let len = thumbnail.length;
     let hasJpgOrPng = thumbnail.slice(len - 3, len) === 'jpg' || thumbnail.slice(len - 3, len) === 'png'
     if (hasJpgOrPng) {

@@ -19,7 +19,7 @@ export default class App extends Component {
     <Provider store={ store }>    
       <Router>
         <Scene key="root">
-          <Scene key="mainScreen" component={ItemsList} title="Articles" initial={true} />
+          <Scene key="mainScreen" component={ItemsList} title="reddit" initial={true} />
           <Scene key="selectedItem" component={SelectedItem} title="SelectedItem" />
         </Scene>
       </Router>
