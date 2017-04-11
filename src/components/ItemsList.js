@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ListView, View, Text, ScrollView, StyleSheet, RefreshControl } from 'react-native';
+import { ListView, View, Text, StyleSheet, RefreshControl } from 'react-native';
 import { connect } from 'react-redux';
 import ListItem from './ListItem';
 import { fetchPosts } from '../actions';
@@ -12,7 +12,7 @@ class ItemsList extends Component {
   }
 
   renderRow(item) {
-    return <ListItem item={item}/>;
+    return <ListItem item={ item }/>;
   }
 
   render() {
@@ -21,7 +21,7 @@ class ItemsList extends Component {
     return (
       <View style={ container }>
         <View style={{ flex: 1 }}>
-        {!isFetching && 
+        { !isFetching && 
         <ListView
           dataSource={ this.props.items }
           renderRow={ this.renderRow }
@@ -29,14 +29,14 @@ class ItemsList extends Component {
           refreshControl={
             <RefreshControl
               refreshing={ isFetching }
-              onRefresh={() => fetchPosts() }
+              onRefresh={ () => fetchPosts() }
             />
           }          
         />}
         </View>
-        {isFetching && <View style={{ flex: 1 }}>
+        { isFetching && <View style={{ flex: 1 }}> 
           <Spinner/>
-        </View>}
+        </View> }
       </View>
     );
   }
