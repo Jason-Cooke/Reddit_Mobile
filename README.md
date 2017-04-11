@@ -30,11 +30,6 @@ Reddit Mobile is a mobile version of [reddit](https://www.reddit.com/) using the
 - [x] Be able to store the fetched content locally so that if you relaunch the app, it will display that content first before fetching for new content. I recommend using Redux Persist or AsyncStorage.
 - [ ] Works on both iOS and Android.
 
-## Todo
-- Verify app works on Android platform
-- Improve header UI component
-- Improve refresh experience to keep state of list on refresh
-
 ## Libraries used and why I chose them
 - **_redux-thunk_** 
     - To deal with the async action of fetching data from the Reddit API.
@@ -48,10 +43,11 @@ Reddit Mobile is a mobile version of [reddit](https://www.reddit.com/) using the
             * https://medium.com/@spencer_carli/exploring-navigators-in-react-native-869b6ab47e0f
 - **_redux-persist_**
     - Easy to use `autoRehydrate(config)` method out of the box
-
-
-
-
+    
+## Todo
+- Verify app works on Android platform
+- Improve header UI component
+- Improve refresh experience to keep state of list on refresh
 
 ## Miscellaneous
 **Versions**
