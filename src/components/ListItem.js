@@ -40,6 +40,7 @@ class ListItem extends Component {
       subreddit_name_prefixed 
     } = this.props.item.data;
     const { data } = this.props.item;
+    const bullet = ' \u2022';
     const { 
       postInfo, 
       headerContentStyle, 
@@ -49,7 +50,7 @@ class ListItem extends Component {
       thumbnailStyle,
       headerContainerStyle
     } = styles;
-
+    
     return (
     <TouchableWithoutFeedback
       onPress={ () => this.goToSelectedItemPage(data) }
@@ -74,9 +75,9 @@ class ListItem extends Component {
               style={ postInfo }
             > 
               { subreddit_name_prefixed } 
-              {' \u2022'} 
+              { bullet } 
               { timeDifference(created_utc) } 
-              {' \u2022'} submitted by: { author }
+              { bullet } submitted by: { author }
             </Text>
           </View>
         </CardSection>  
