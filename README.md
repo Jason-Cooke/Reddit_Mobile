@@ -38,8 +38,12 @@ Reddit Mobile is a mobile version of [reddit](https://www.reddit.com/) using the
 - react-native
 - react
 - redux
-- redux-thunk
-- react-native-router-flux
+- redux-thunk: To deal with the async action of fetching data.
+- react-native-router-flux: 
+    - _I chose this router over others for its:_
+    - strong community interest
+    - Redux type patterns
+    - Nice API and easy to understand API
 - redux-persist
 - redux-thunk
 
