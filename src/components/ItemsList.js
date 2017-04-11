@@ -15,7 +15,9 @@ import { Spinner } from './common';
 
 const propTypes = {
   items: PropTypes.object,
-  fetchPosts: PropTypes.func
+  fetchPosts: PropTypes.func,
+  isFetching: PropTypes.bool,
+  isRefreshing: PropTypes.bool // todo use is refreshing to keep state on refresh
 };
 
 class ItemsList extends Component {  
@@ -29,7 +31,12 @@ class ItemsList extends Component {
 
   render() {
     const { mainContainer, subContainer } = styles;
-    const { isFetching, fetchPosts } = this.props;
+    const { 
+      isFetching, 
+      fetchPosts, 
+      isRefreshing 
+    } = this.props;
+    
     return (
       <View style={ mainContainer }>
         <View style={ subContainer }>
@@ -40,7 +47,7 @@ class ItemsList extends Component {
           enableEmptySections={ true }
           refreshControl={
               <RefreshControl
-                refreshing={ isFetching }
+                refreshing={ isFetching } //todo implement isRefreshing to keep state of list on scroll
                 onRefresh={ () => fetchPosts() }
               />
             }          
@@ -58,11 +65,18 @@ const dataSource = new ListView.DataSource({
 });
 
 const mapStateToProps = state => {
-  const { posts, isFetching } = state.items;
+  const { 
+    posts, 
+    isFetching, 
+    isRefreshing 
+  } = state.items;
+
   return { 
     items: dataSource.cloneWithRows(posts), 
-    isFetching: isFetching 
+    isFetching: isFetching,
+    isRefreshing: isRefreshing 
   };
+
 };
 
 export default connect(mapStateToProps, { fetchPosts })(ItemsList);
