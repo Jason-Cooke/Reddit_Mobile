@@ -13,7 +13,11 @@ import * as actions from '../actions';
 
 import { timeDifference, validateImage } from './helpers';
 
-import { CardSection, Card, Button } from './common';
+import { 
+  CardSection, 
+  Card, 
+  Button 
+} from './common';
 
 const propTypes = {
   item: PropTypes.object,
