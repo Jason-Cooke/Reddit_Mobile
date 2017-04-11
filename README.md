@@ -13,7 +13,7 @@ Reddit Mobile is a mobile version of [reddit](https://www.reddit.com/) using the
 
 ## Features
 - Redux
-- Data persistence using `redux-persist` to display that content first before fetching for new content
+- Fast relaunch using `redux-persist` to display that content first before fetching for new content
 - Routing using react-router-native-flux
 - Refresh on scroll using RefreshControl
 
