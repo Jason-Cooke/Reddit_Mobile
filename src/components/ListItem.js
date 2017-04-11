@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, Image, View, TouchableWithoutFeedback, LayoutAnimation, Dimensions }  from 'react-native'
+import { Text, Image, View, TouchableWithoutFeedback, LayoutAnimation, Dimensions }  from 'react-native';
 import { connect } from 'react-redux';
 import { Actions } from 'react-native-router-flux';
 import * as actions from '../actions';
@@ -8,26 +8,21 @@ import { timeDifference, validateImage } from './helpers';
 
 import { CardSection, Card, Button } from './common';
 
-/* Use ComponentWillMount LayourAnimation for transition */
-/*Refactor to use Touchable opacity instead of touchable without feedback */
 class ListItem extends Component {
   goToSelectedItemPage(data) {
     Actions.selectedItem(data);
-  };
+  }
 
   render() {
     const { titleStyle } = styles;
     const { url, id, author, thumbnail, title, ups, num_comments, domain, created_utc, downs, subreddit_name_prefixed } = this.props.item.data;
     const { data } = this.props.item;
-    const {
-      postInfo,
-      headerContentStyle,
-      headerTextStyle,
-      imageStyle,
+    const { postInfo, headerContentStyle, headerTextStyle, imageStyle,
       articleDetails,
       thumbnailStyle,
       headerContainerStyle
-    } = styles;    
+    } = styles;
+
     return (
     <TouchableWithoutFeedback
       onPress={ () => this.goToSelectedItemPage(data) }
@@ -65,8 +60,8 @@ class ListItem extends Component {
 
 
 const mapStateToProps = (state, ownProps) => {
-  const selected = state.selectedItemId === ownProps.item.data.id
-  return { selected }
+  const selected = state.selectedItemId === ownProps.item.data.id;
+  return { selected };
 };
 
 export default connect(mapStateToProps, actions)(ListItem);
@@ -115,4 +110,4 @@ const styles = {
     fontSize: 12,
     color: '#657786'
   }
-}
+};

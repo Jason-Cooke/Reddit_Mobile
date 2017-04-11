@@ -3,7 +3,7 @@ import { View, Text, Image, Linking } from 'react-native';
 import { Card, CardSection, Header, Button } from './common';
 import { timeDifference, validateImage } from './helpers';
 
-export default class SelectedItemclear extends Component {
+export default class SelectedItem extends Component {
   render() {
     const { thumbnail, title, author, created_utc, num_comments, ups, downs, url, domain, subreddit_name_prefixed, subreddit } = this.props;
     const { container, thumbnailStyle, headerContentStyle, thumbnailContainerStyle, headerTextStyle, imageStyle, aligner, articleDetails, linkDetails } = styles;
@@ -26,7 +26,7 @@ export default class SelectedItemclear extends Component {
             <Text style={ articleDetails }> Subreddit: {subreddit} |</Text>
             <Text style={ linkDetails }
               onPress={() => Linking.openURL('http://' + domain)}
-            > { domain }  </Text>
+            > { domain }</Text>
           </CardSection>          
           <CardSection style={headerContentStyle}>      
               <Text style={ articleDetails }> Upvotes: { ups.toLocaleString() } | </Text>
@@ -38,7 +38,7 @@ export default class SelectedItemclear extends Component {
       </CardSection>
         </Card>        
       </View>
-    )
+    );
   }
 }
 
@@ -87,4 +87,4 @@ const styles = {
     flex: 1, 
     backgroundColor: '#f5f8fa' 
   }
-}
+};

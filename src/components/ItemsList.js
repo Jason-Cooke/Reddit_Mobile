@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { ListView, View, Text, ScrollView, StyleSheet, RefreshControl } from 'react-native';
 import { connect } from 'react-redux';
 import ListItem from './ListItem';
-import { fetchPosts } from '../actions'
-import { Spinner } from './common'
+import { fetchPosts } from '../actions';
+import { Spinner } from './common';
 
 
 class ItemsList extends Component {  
@@ -18,7 +18,7 @@ class ItemsList extends Component {
   render() {
     const { container } = styles;
     const { isFetching, fetchPosts } = this.props;
-    return(
+    return (
       <View style={ container }>
         <View style={{ flex: 1 }}>
         {!isFetching && 

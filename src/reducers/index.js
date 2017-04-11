@@ -4,5 +4,4 @@ import SelectionReducer from './SelectionReducer';
 
 export default combineReducers({
   items: ItemsReducer,
-  // selectedItemId: SelectionReducer // should i keep this ???
-}) 
+}) ;
