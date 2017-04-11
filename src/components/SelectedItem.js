@@ -22,9 +22,8 @@ export default class SelectedItem extends Component {
            </Text>            
           </CardSection>
           <CardSection style={ headerContentStyle }>
-            <Text 
-              style={ articleDetails }> 
-                Written by { author } { timeDifference(created_utc) } to { subreddit_name_prefixed }
+            <Text style={ articleDetails }> 
+              Written by { author } { timeDifference(created_utc) } to { subreddit_name_prefixed }
             </Text>
           </CardSection >
           <CardSection style={ headerContentStyle }>
