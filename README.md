@@ -36,9 +36,6 @@ Reddit Mobile is a mobile version of [reddit](https://www.reddit.com/) using the
 - Improve refresh experience to keep state of list on refresh
 
 ## Libraries used and why I chose them
-- **_react-native_**
-- **_react_**
-- **_redux_**
 - **_redux-thunk_** 
     - To deal with the async action of fetching data from the Reddit API.
 - **_react-native-router-flux_**
