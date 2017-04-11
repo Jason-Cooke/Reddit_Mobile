@@ -34,13 +34,15 @@ Reddit Mobile is a mobile version of [reddit](https://www.reddit.com/) using the
 - Verify app works on Android platform
 - Improve header UI component
 
-## Libraries Used
+## Libraries used
+- react-native
+- react
 - redux
 - redux-thunk
 - react-native-router-flux
 - redux-persist
 - redux-thunk
-- isomorphic-fetch
+
 
 ## Miscellaneous
 **Versions**
