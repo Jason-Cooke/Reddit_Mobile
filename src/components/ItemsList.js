@@ -52,7 +52,10 @@ const dataSource = new ListView.DataSource({
 
 const mapStateToProps = state => {
   const { posts, isFetching } = state.items;
-  return { items: dataSource.cloneWithRows(posts), isFetching: isFetching };
+  return { 
+    items: dataSource.cloneWithRows(posts), 
+    isFetching: isFetching 
+  };
 };
 
 export default connect(mapStateToProps, { fetchPosts })(ItemsList);
