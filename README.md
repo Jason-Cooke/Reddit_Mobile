@@ -39,6 +39,11 @@ Reddit Mobile is a mobile version of [reddit](https://www.reddit.com/) using the
 - redux-thunk
 - isomorphic-fetch
 
+## Miscellaneous
+**Versions**
+- react-native-cli: 2.0.1
+- react-native: 0.43.2
+
 ## License
 The content of this repository is licensed under a MIT license.
 [LICENSE](/LICENSE) file.
