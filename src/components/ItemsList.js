@@ -26,17 +26,17 @@ class ItemsList extends Component {
     return (
       <View style={ mainContainer }>
         <View style={ subContainer }>
-        { !isFetching && 
+        {!isFetching && 
         <ListView
           dataSource={ this.props.items }
           renderRow={ this.renderRow }
           enableEmptySections={ true }
           refreshControl={
-            <RefreshControl
-              refreshing={ isFetching }
-              onRefresh={ () => fetchPosts() }
-            />
-          }          
+              <RefreshControl
+                refreshing={ isFetching }
+                onRefresh={ () => fetchPosts() }
+              />
+            }          
         />}
         </View>
         {isFetching && <View style={ subContainer }> 

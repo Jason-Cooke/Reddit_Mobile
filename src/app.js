@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
-import { View, Text, Navigator, AsyncStorage } from 'react-native'
+import { 
+  View, 
+  Text, 
+  Navigator, 
+  AsyncStorage 
+} from 'react-native'
 import { Router, Scene } from 'react-native-router-flux';
 
 import { persistStore, autoRehydrate } from 'redux-persist';
