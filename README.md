@@ -3,10 +3,10 @@ Reddit Mobile is a mobile version of [reddit](https://www.reddit.com/) using the
 
 ## Installation
 1. Open new terminal window
-2. run `$git clone https://github.com/aarboleda1/Reddit_Mobile.git` - clone repo
-3. run `$cd ./Reddit_Mobile`
-4. run `$npm install` - install dependencies
-5. run `$react-native run-ios`
+2. `git clone https://github.com/aarboleda1/Reddit_Mobile.git` - clone repo
+3. `cd ./Reddit_Mobile`
+4. `npm install` - install dependencies
+5. `react-native run-ios`
 
 ## Features
 1. Redux
