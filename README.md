@@ -36,7 +36,7 @@ Reddit Mobile is a mobile version of [reddit](https://www.reddit.com/) using the
 - **_react-native-router-flux_**
     - Strong community interest
     - Redux type patterns
-    - Nice API and easy to understand API
+    - Easy to understand and well designed API
         * Resources I explored before making decision
             * http://blog.paracode.com/2016/01/05/routing-and-navigation-in-react-native/
             * https://github.com/jondot/awesome-react-native
