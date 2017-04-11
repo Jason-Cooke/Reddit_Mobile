@@ -1,5 +1,8 @@
 # Reddit Mobile
 Reddit Mobile is a mobile version of [reddit](https://www.reddit.com/) using the React-Native Library. View the most up to date and trending reddit articles in an elegant UI.
+## Prerequisites
+- You will need Node.js, Watchman, the React Native command line interface, and Xcode.
+- Please go to [React Native Setup](https://facebook.github.io/react-native/docs/getting-started.html) to install React Native
 
 ## Installation
 1. Open new terminal window
