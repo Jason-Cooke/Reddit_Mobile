@@ -14,6 +14,7 @@ import ItemsList from './components/ItemsList';
 
 export default class App extends Component {
   render() {
+    
     const store = createStore(reducers, undefined, compose(applyMiddleware(ReduxThunk, createLogger()), autoRehydrate()));
     persistStore(store, { storage: AsyncStorage }); //initialize storage on initial render
 
@@ -31,7 +32,7 @@ export default class App extends Component {
 }
 
 /*
-This styles was created in order to fix issue of the NavBar overlaying content on the screen
+This style was created in order to fix issue of the NavBar overlaying content on the screen
 https://github.com/aksonov/react-native-router-flux/issues/103
 */
 const styles = {
