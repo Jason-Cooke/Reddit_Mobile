@@ -14,6 +14,8 @@ import SelectedItem from './components/SelectedItem';
 import ItemsList from './components/ItemsList';
 import configureStore from './configureStore'; 
 
+// This is the entry point into the app
+
 export default class App extends Component {
   render() {
     
