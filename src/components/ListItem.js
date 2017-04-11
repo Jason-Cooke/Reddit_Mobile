@@ -45,7 +45,7 @@ class ListItem extends Component {
       subreddit_name_prefixed 
     } = this.props.item.data;
     const { data } = this.props.item;
-    const bullet = ' \u2022';
+    const bulletPoint = ' \u2022 ';
     const { 
       postInfo, 
       headerContentStyle, 
@@ -79,9 +79,9 @@ class ListItem extends Component {
               style={ postInfo }
             > 
               { subreddit_name_prefixed } 
-              { bullet } 
+              { bulletPoint } 
               { timeDifference(created_utc) } 
-              { bullet } submitted by: { author }
+              { bulletPoint }submitted by: { author }
             </Text>
         </CardSection>  
         <CardSection> 
