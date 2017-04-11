@@ -75,7 +75,6 @@ class ListItem extends Component {
         </View>
       </CardSection>        
         <CardSection>
-          <View>
             <Text 
               style={ postInfo }
             > 
@@ -84,10 +83,9 @@ class ListItem extends Component {
               { timeDifference(created_utc) } 
               { bullet } submitted by: { author }
             </Text>
-          </View>
         </CardSection>  
         <CardSection> 
-            <Text style={ articleDetails }> Upvotes: { ups.toLocaleString() } |</Text>
+            <Text style={ articleDetails }>Upvotes: { ups.toLocaleString() } |</Text>
             <Text style={ articleDetails }> Downvotes: { downs.toLocaleString() } |</Text>              
             <Text style={ articleDetails }> Comments: { num_comments.toLocaleString() }</Text>
         </CardSection>
@@ -135,7 +133,8 @@ const styles = {
   },
   articleDetails: {
     fontSize: 11,
-    color: '#657786'
+    color: '#657786',
+    paddingLeft: 4,     
   },
   headerContainerStyle: {
     display: 'flex', 
@@ -148,7 +147,8 @@ const styles = {
   },
   postInfo: {
     fontSize: 12,
-    color: '#657786'
+    color: '#657786',
+    paddingLeft: 4,     
   }
 };
 

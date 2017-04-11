@@ -34,7 +34,8 @@ export default class SelectedItem extends Component {
       headerTextStyle, 
       imageStyle, 
       articleDetails, 
-      linkDetails 
+      linkDetails,
+      buttonWrapper 
     } = styles;
     
     return (
@@ -59,7 +60,7 @@ export default class SelectedItem extends Component {
             </Text>
           </CardSection >
           <CardSection style={ headerContentStyle }>
-            <Text style={ articleDetails }> Subreddit: { subreddit } |</Text>
+            <Text style={ articleDetails }>Subreddit: { subreddit } | </Text>
             <Text 
               style={ linkDetails }
               onPress={() => Linking.openURL('http://' + domain)}
@@ -84,13 +85,16 @@ export default class SelectedItem extends Component {
                 Comments: { num_comments.toLocaleString() } | 
               </Text>
           </CardSection>
+
           <CardSection>
-          <Button 
-            onPress={() => Linking.openURL(url)}
-            children={'Read Full Article'}
-          > 
-          </Button>
-      </CardSection>
+            <View style={ buttonWrapper }>
+              <Button 
+                onPress={() => Linking.openURL(url)}
+                children={'Read Full Article'}
+              > 
+              </Button>
+            </View>
+          </CardSection>
         </Card>        
       </View>
     );
@@ -105,7 +109,8 @@ const styles = {
   headerTextStyle: {
     fontSize: 19,
     fontWeight: '600',
-    color: '#657786'
+    color: '#657786',
+    paddingLeft: 4            
   },
   imageStyle: {
     height: 300,
@@ -114,14 +119,18 @@ const styles = {
   },
   articleDetails: {
     fontSize: 12,
-    color: '#657786'
+    color: '#657786',
+    paddingLeft: 4,             
   },
   linkDetails: {
     color: '#008aff',
-    fontSize: 13
+    fontSize: 13,
   },
   itemContainer: { 
     flex: 1, 
-    backgroundColor: '#f5f8fa' 
+    backgroundColor: '#f5f8fa', 
+  },
+  buttonWrapper: {
+    paddingLeft: 4
   }
 };
