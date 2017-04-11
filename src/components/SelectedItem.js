@@ -5,7 +5,7 @@ import { timeDifference, validateImage } from './helpers';
 
 export default class SelectedItem extends Component {
   render() {
-    const { image ,url, thumbnail, title, author, created_utc, num_comments, ups, downs, domain, subreddit_name_prefixed, subreddit } = this.props;
+    const { image, url, thumbnail, title, author, created_utc, num_comments, ups, downs, domain, subreddit_name_prefixed, subreddit } = this.props;
     const { itemContainer, headerContentStyle, headerTextStyle, imageStyle, articleDetails, linkDetails } = styles;
     return (
       <View style={ itemContainer }>
@@ -17,20 +17,31 @@ export default class SelectedItem extends Component {
             />
           </CardSection>
           <CardSection>
-            <Text style={ headerTextStyle }> { title } </Text>            
+            <Text style={ headerTextStyle }> 
+              { title }
+           </Text>            
           </CardSection>
           <CardSection style={ headerContentStyle }>
-            <Text style={ articleDetails }> Written by { author } { timeDifference(created_utc) } to { subreddit_name_prefixed }</Text>
+            <Text 
+              style={ articleDetails }> 
+                Written by { author } { timeDifference(created_utc) } to { subreddit_name_prefixed }
+            </Text>
           </CardSection >
-          <CardSection style={headerContentStyle}>
+          <CardSection style={ headerContentStyle }>
             <Text style={ articleDetails }> Subreddit: { subreddit } |</Text>
             <Text style={ linkDetails }
               onPress={() => Linking.openURL('http://' + domain)}
             > { domain }</Text>
           </CardSection>          
           <CardSection style={headerContentStyle}>      
-              <Text style={ articleDetails }> Upvotes: { ups.toLocaleString() } | </Text>
-              <Text style={ articleDetails }> Downvotes: { downs.toLocaleString() } | </Text>              
+              <Text 
+                style={ articleDetails }
+              > 
+                Upvotes: { ups.toLocaleString() } | 
+              </Text>
+              <Text 
+                style={ articleDetails }> Downvotes: { downs.toLocaleString() } | 
+              </Text>              
               <Text style={ articleDetails }> Comments: { num_comments.toLocaleString() } | </Text>
           </CardSection>
           <CardSection>

@@ -10,17 +10,17 @@ class ItemsList extends Component {
   componentDidMount() {
     this.props.fetchPosts();
   }
-
+  
   renderRow(item) {
     return <ListItem item={ item }/>;
   }
 
   render() {
-    const { container } = styles;
+    const { mainContainer, subContainer } = styles;
     const { isFetching, fetchPosts } = this.props;
     return (
-      <View style={ container }>
-        <View style={{ flex: 1 }}>
+      <View style={ mainContainer }>
+        <View style={ subContainer }>
         { !isFetching && 
         <ListView
           dataSource={ this.props.items }
@@ -34,7 +34,7 @@ class ItemsList extends Component {
           }          
         />}
         </View>
-        { isFetching && <View style={{ flex: 1 }}> 
+        { isFetching && <View style={ subContainer }> 
           <Spinner/>
         </View> }
       </View>
@@ -53,8 +53,11 @@ const mapStateToProps = state => {
 export default connect(mapStateToProps, { fetchPosts })(ItemsList);
 
 const styles = StyleSheet.create({
-  container: { 
+  mainContainer: { 
     flex: 1, 
     backgroundColor: '#f5f8fa' 
+  },
+  subContainer: {
+    flex: 1
   }
 });
