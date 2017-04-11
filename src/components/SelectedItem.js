@@ -5,8 +5,28 @@ import { timeDifference, validateImage } from './helpers';
 
 export default class SelectedItem extends Component {
   render() {
-    const { url, thumbnail, title, author, created_utc, num_comments, ups, downs, domain, subreddit_name_prefixed, subreddit } = this.props;
-    const { itemContainer, headerContentStyle, headerTextStyle, imageStyle, articleDetails, linkDetails } = styles;
+    const { 
+      url, 
+      thumbnail, 
+      title, 
+      author, 
+      created_utc, 
+      num_comments, 
+      ups, 
+      downs, 
+      domain, 
+      subreddit_name_prefixed, 
+      subreddit 
+    } = this.props;
+    const { 
+      itemContainer, 
+      headerContentStyle, 
+      headerTextStyle, 
+      imageStyle, 
+      articleDetails, 
+      linkDetails 
+    } = styles;
+    
     return (
       <View style={ itemContainer }>
         <Card>
@@ -23,7 +43,9 @@ export default class SelectedItem extends Component {
           </CardSection>
           <CardSection style={ headerContentStyle }>
             <Text style={ articleDetails }> 
-              Written by { author } { timeDifference(created_utc) } to { subreddit_name_prefixed }
+              Written by { author } 
+              { timeDifference(created_utc) } to 
+              { subreddit_name_prefixed }
             </Text>
           </CardSection >
           <CardSection style={ headerContentStyle }>
@@ -39,12 +61,22 @@ export default class SelectedItem extends Component {
                 Upvotes: { ups.toLocaleString() } | 
               </Text>
               <Text 
-                style={ articleDetails }> Downvotes: { downs.toLocaleString() } | 
+                style={ articleDetails }
+              > 
+                Downvotes: { downs.toLocaleString() } | 
               </Text>              
-              <Text style={ articleDetails }> Comments: { num_comments.toLocaleString() } | </Text>
+              <Text 
+                style={ articleDetails }
+              > 
+                Comments: { num_comments.toLocaleString() } | 
+              </Text>
           </CardSection>
           <CardSection>
-          <Button onPress={() => Linking.openURL(url)}> Read Full Article </Button>
+          <Button 
+            onPress={() => Linking.openURL(url)}
+            children={'Read Full Article'}
+          > 
+          </Button>
       </CardSection>
         </Card>        
       </View>

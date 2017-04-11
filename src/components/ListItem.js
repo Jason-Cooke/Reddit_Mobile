@@ -1,5 +1,11 @@
-import React, { Component } from 'react';
-import { Text, Image, View, TouchableWithoutFeedback, LayoutAnimation, Dimensions }  from 'react-native';
+import React, { Component, PropTypes } from 'react';
+import { 
+  Text, 
+  Image,
+  View, 
+  TouchableWithoutFeedback, 
+  Dimensions 
+} from 'react-native';
 import { connect } from 'react-redux';
 import { Actions } from 'react-native-router-flux';
 import * as actions from '../actions';
@@ -8,6 +14,11 @@ import { timeDifference, validateImage } from './helpers';
 
 import { CardSection, Card, Button } from './common';
 
+const propTypes = {
+  item: PropTypes.object,
+  selected: PropTypes.bool  
+};
+
 class ListItem extends Component {
   goToSelectedItemPage(data) {
     Actions.selectedItem(data);
@@ -15,9 +26,25 @@ class ListItem extends Component {
 
   render() {
     const { titleStyle } = styles;
-    const { url, id, author, thumbnail, title, ups, num_comments, domain, created_utc, downs, subreddit_name_prefixed } = this.props.item.data;
+    const { 
+      url, 
+      id, 
+      author, 
+      thumbnail, 
+      title, 
+      ups, 
+      num_comments, 
+      domain, 
+      created_utc, 
+      downs, 
+      subreddit_name_prefixed 
+    } = this.props.item.data;
     const { data } = this.props.item;
-    const { postInfo, headerContentStyle, headerTextStyle, imageStyle,
+    const { 
+      postInfo, 
+      headerContentStyle, 
+      headerTextStyle, 
+      imageStyle,
       articleDetails,
       thumbnailStyle,
       headerContainerStyle
@@ -43,7 +70,14 @@ class ListItem extends Component {
       </CardSection>        
         <CardSection>
           <View>
-            <Text style={ postInfo }> { subreddit_name_prefixed } {' \u2022'} { timeDifference(created_utc) } {' \u2022'} submitted by: { author }</Text>
+            <Text 
+              style={ postInfo }
+            > 
+              { subreddit_name_prefixed } 
+              {' \u2022'} 
+              { timeDifference(created_utc) } 
+              {' \u2022'} submitted by: { author }
+            </Text>
           </View>
         </CardSection>  
         <CardSection> 
@@ -111,3 +145,5 @@ const styles = {
     color: '#657786'
   }
 };
+
+ListItem.propTypes = propTypes;

@@ -1,10 +1,15 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { ListView, View, Text, StyleSheet, RefreshControl } from 'react-native';
 import { connect } from 'react-redux';
+
 import ListItem from './ListItem';
 import { fetchPosts } from '../actions';
 import { Spinner } from './common';
 
+const propTypes = {
+  items: PropTypes.object,
+  fetchPosts: PropTypes.func
+};
 
 class ItemsList extends Component {  
   componentDidMount() {
@@ -34,9 +39,9 @@ class ItemsList extends Component {
           }          
         />}
         </View>
-        { isFetching && <View style={ subContainer }> 
+        {isFetching && <View style={ subContainer }> 
           <Spinner/>
-        </View> }
+        </View>}
       </View>
     );
   }
@@ -61,3 +66,5 @@ const styles = StyleSheet.create({
     flex: 1
   }
 });
+
+ItemsList.propTypes = propTypes;
