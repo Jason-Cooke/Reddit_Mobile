@@ -14,6 +14,8 @@ Reddit Mobile is a mobile version of [reddit](https://www.reddit.com/). View the
 4. Refresh on scroll using RefreshControl
 
 ## Milestones and Tasks
+
+**Basic**
 - [x] Use Redux.
 - [x] Create a main screen that fetches from Reddit’s API (https://www.reddit.com/.json) and displays the basic content (author, title, thumbnail, up votes, etc) in a list.
 - [x] Users should be able to pull to refresh the list.
