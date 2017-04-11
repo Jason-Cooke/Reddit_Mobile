@@ -33,6 +33,7 @@ Reddit Mobile is a mobile version of [reddit](https://www.reddit.com/) using the
 ## Todo
 - Verify app works on Android platform
 - Improve header UI component
+- Improve refresh experience to keep state of list on refresh
 
 ## Libraries used and why I chose them
 - **_react-native_**
