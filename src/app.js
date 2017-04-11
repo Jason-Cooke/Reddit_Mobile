@@ -55,3 +55,4 @@ const styles = {
     paddingTop: Navigator.NavigationBar.Styles.General.TotalNavHeight    
   }
 };
+
