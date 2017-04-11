@@ -46,15 +46,15 @@ Reddit Mobile is a mobile version of [reddit](https://www.reddit.com/) using the
 
 ## Folder Directory Guideline
 - All of my work is in the `src` folder
-* /src
-   - /actions _all redux actions_
-   - /components _In the root of this folder are the 3 main components that make up the UI_        
-     - /common _Reusable components that are used throughout the main components_
+* **_/src_**
+   - **_/actions_** _all redux actions_
+   - **_/components_** _In the root of this folder are the 3 main components that make up the UI_        
+     - **_/common_** _Reusable components that are used throughout the main components_
         + ItemsList.js - list view
         + ListItem.js - list component
         + SelectedItem.js - screen view after clicking on list item
-   - /images    
-   - /reducers 
+   - **_/images_**    
+   - **_/reducers_** 
    + app.js - _main entry point into app_    
    + configureStore.js - _redux store configuration in the app_
     
