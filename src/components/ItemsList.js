@@ -17,7 +17,6 @@ const propTypes = {
   items: PropTypes.object,
   fetchPosts: PropTypes.func,
   isFetching: PropTypes.bool,
-  isRefreshing: PropTypes.bool // todo use is refreshing to keep state on refresh
 };
 
 class ItemsList extends Component {  
@@ -33,8 +32,7 @@ class ItemsList extends Component {
     const { mainContainer, subContainer } = styles;
     const { 
       isFetching, 
-      fetchPosts, 
-      isRefreshing 
+      fetchPosts
     } = this.props;
     
     return (
@@ -49,6 +47,9 @@ class ItemsList extends Component {
               <RefreshControl
                 refreshing={ isFetching } //todo implement isRefreshing to keep state of list on scroll
                 onRefresh={ () => fetchPosts() }
+                title="Loading..."
+                titleColor="#00ff00"
+                colors={['#ff0000', '#00ff00', '#0000ff']}
               />
             }          
         />}
@@ -68,15 +69,12 @@ const mapStateToProps = state => {
   const { 
     posts, 
     isFetching, 
-    isRefreshing 
   } = state.items;
 
   return { 
     items: dataSource.cloneWithRows(posts), 
     isFetching: isFetching,
-    isRefreshing: isRefreshing 
   };
-
 };
 
 export default connect(mapStateToProps, { fetchPosts })(ItemsList);
