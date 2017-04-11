@@ -2,21 +2,17 @@ import React, { Component } from 'react';
 import { View, Text, Navigator, AsyncStorage } from 'react-native'
 import { Router, Scene } from 'react-native-router-flux';
 
-import { createStore, applyMiddleware, compose } from 'redux';
-import { Provider } from 'react-redux';
-import ReduxThunk from 'redux-thunk';
-import { createLogger } from 'redux-logger';
 import { persistStore, autoRehydrate } from 'redux-persist';
+import { Provider } from 'react-redux';
 
-import reducers from './reducers';
 import SelectedItem from './components/SelectedItem';
 import ItemsList from './components/ItemsList';
+import configureStore from './configureStore'; 
 
 export default class App extends Component {
   render() {
-    
-    const store = createStore(reducers, undefined, compose(applyMiddleware(ReduxThunk, createLogger()), autoRehydrate()));
-    persistStore(store, { storage: AsyncStorage }); //initialize storage on initial render
+    const store = configureStore(); // Create instance of store on render
+    persistStore(store, { storage: AsyncStorage }); // method from redux-persist to store data in AsyncStorage
 
     return (
     <Provider store={ store }>    

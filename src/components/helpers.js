@@ -1,6 +1,6 @@
 /*
 Used to display relative time i.e 
-Input: time post was created
+Input: time post was created in i.e seconds 1498736251 
 Output: relative time to now. created => 4 hours ago, 10 minutes ago, 2 months ago
 */
 
