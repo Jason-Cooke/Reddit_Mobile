@@ -43,6 +43,24 @@ Reddit Mobile is a mobile version of [reddit](https://www.reddit.com/) using the
             * https://medium.com/@spencer_carli/exploring-navigators-in-react-native-869b6ab47e0f
 - **_redux-persist_**
     - Easy to use `autoRehydrate(config)` method out of the box
+
+**Folder Directory Guideline**
+- All of my work is in the `src` folder
+--src
+    |
+    --/actions _action creators_
+    |
+    --/components _In the root of this folder are the 3 main components that make up the UI_
+        |
+        --/common _Reusable components that are used throughout the app_
+    |
+    --/images
+    |
+    --/reducers _the reducer folder from redux_
+    |
+    app.js - _main entry point into app_
+    |
+    configureStore.js - _redux configuration in the app_
     
 ## Todo
 - Verify app works on Android platform
