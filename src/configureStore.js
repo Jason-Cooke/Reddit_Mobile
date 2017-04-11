@@ -15,9 +15,10 @@ const configureStore = () => {
     compose(
       applyMiddleware(
         ReduxThunk, 
-        createLogger() // for development purposes to see redux actions in debugging mode
+        createLogger() 
     ), 
-    autoRehydrate()) // fn from redux-persist to fill state first from local storage before fetch request is received
+      autoRehydrate() // fetches local content from AsyncStorage to display before fetching new content
+    ) 
   );
 }
 export default configureStore
