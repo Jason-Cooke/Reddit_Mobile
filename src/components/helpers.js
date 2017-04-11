@@ -1,7 +1,7 @@
 /*
-Used to display relative time i.e 
-Input: time post was created in i.e seconds 1498736251 
-Output: relative time to now. created => 4 hours ago, 10 minutes ago, 2 months ago
+  Used to display relative time i.e 
+  Input: time post was created in i.e seconds 1498736251 
+  Output: relative time to now. created => 4 hours ago, 10 minutes ago, 2 months ago
 */
 
 export const timeDifference = (previous) => {
@@ -36,7 +36,7 @@ export const timeDifference = (previous) => {
 };
 
 /*
-Not all posts have images - this function determines whether to display a default reddit png or the given png/jpg
+  Not all posts have images - this function determines whether to display a default reddit png or the given png/jpg
 */
 
 export const validateImage = (thumbnail) => {
