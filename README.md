@@ -12,10 +12,10 @@ Reddit Mobile is a mobile version of [reddit](https://www.reddit.com/) using the
 5. `react-native run-ios`
 
 ## Features
-1. Redux
-2. Data persistence using `redux-persist` to display that content first before fetching for new content
-3. Routing using react-router-native-flux
-4. Refresh on scroll using RefreshControl
+- Redux
+- Data persistence using `redux-persist` to display that content first before fetching for new content
+- Routing using react-router-native-flux
+- Refresh on scroll using RefreshControl
 
 ## Milestones and Tasks
 
