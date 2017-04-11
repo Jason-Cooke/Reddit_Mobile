@@ -35,12 +35,12 @@ Reddit Mobile is a mobile version of [reddit](https://www.reddit.com/) using the
 - Improve header UI component
 
 ## Libraries used and why I chose them
-- *react-native*
-- *react*
-- *redux*
-- *redux-thunk:* 
+- **_react-native_**
+- **_react_**
+- **_redux_**
+- **_redux-thunk_** 
     - To deal with the async action of fetching data from the Reddit API.
-- *react-native-router-flux:* 
+- **_react-native-router-flux_**
     - Strong community interest
     - Redux type patterns
     - Nice API and easy to understand API
@@ -48,7 +48,7 @@ Reddit Mobile is a mobile version of [reddit](https://www.reddit.com/) using the
             * http://blog.paracode.com/2016/01/05/routing-and-navigation-in-react-native/
             * https://github.com/jondot/awesome-react-native
             * https://medium.com/@spencer_carli/exploring-navigators-in-react-native-869b6ab47e0f
-- *redux-persist*
+- **_redux-persist_**
     - Easy to use `autoRehydrate(config)` method out of the box
 
 
