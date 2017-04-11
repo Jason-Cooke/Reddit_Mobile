@@ -1,6 +1,16 @@
 import React, { Component } from 'react';
-import { View, Text, Image, Linking } from 'react-native';
-import { Card, CardSection, Header, Button } from './common';
+import { 
+  View, 
+  Text, 
+  Image, 
+  Linking 
+} from 'react-native';
+import { 
+  Card, 
+  CardSection, 
+  Header, 
+  Button 
+} from './common';
 import { timeDifference, validateImage } from './helpers';
 
 export default class SelectedItem extends Component {
@@ -50,9 +60,12 @@ export default class SelectedItem extends Component {
           </CardSection >
           <CardSection style={ headerContentStyle }>
             <Text style={ articleDetails }> Subreddit: { subreddit } |</Text>
-            <Text style={ linkDetails }
+            <Text 
+              style={ linkDetails }
               onPress={() => Linking.openURL('http://' + domain)}
-            > { domain }</Text>
+            > 
+              { domain }
+            </Text>
           </CardSection>          
           <CardSection style={headerContentStyle}>      
               <Text 

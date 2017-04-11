@@ -1,5 +1,12 @@
-import React, { Component, PropTypes } from 'react';
-import { ListView, View, Text, StyleSheet, RefreshControl } from 'react-native';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { 
+  ListView, 
+  View, 
+  Text, 
+  StyleSheet, 
+  RefreshControl 
+} from 'react-native';
 import { connect } from 'react-redux';
 
 import ListItem from './ListItem';
