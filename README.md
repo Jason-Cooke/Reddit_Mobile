@@ -46,8 +46,8 @@ Reddit Mobile is a mobile version of [reddit](https://www.reddit.com/) using the
 
 ## Folder Directory Guideline
 - All of my work is in the `src` folder
-* src
-   - components _In the root of this folder are the 3 main components that make up the UI_        
+* /src
+   - /components _In the root of this folder are the 3 main components that make up the UI_        
      + /common _Reusable components that are used throughout the app i.e._
         + ItemsList - list view
         + ListItem - list component
