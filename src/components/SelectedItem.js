@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { 
   View, 
   Text, 
@@ -12,6 +13,19 @@ import {
   Button 
 } from './common';
 import { timeDifference, validateImage } from './helpers';
+
+const propTypes = {
+  url: PropTypes.string,
+  thumbnail: PropTypes.string,
+  title: PropTypes.string,
+  author: PropTypes.string,
+  created_utc: PropTypes.number,
+  ups: PropTypes.number,
+  downs: PropTypes.number,
+  domain: PropTypes.string,
+  subreddit_name_prefixed: PropTypes.string,
+  subreddit: PropTypes.string
+};
 
 export default class SelectedItem extends Component {
   render() {
@@ -134,3 +148,5 @@ const styles = {
     paddingLeft: 4
   }
 };
+
+SelectedItem.propTypes = propTypes;
