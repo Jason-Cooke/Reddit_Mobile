@@ -52,13 +52,13 @@ export default class App extends Component {
 
 const styles = {
   navTitle: {
-    color: '#657786', // changing navbar title color
+    color: '#657786', 
     fontWeight: 'bold',
     fontSize: 18
   },
   navBar: {
     flex: 1,
-    backgroundColor: '#f5f8fa', // changing navbar color
+    backgroundColor: '#f5f8fa',
   },
   sceneStyle: {
     paddingTop: Navigator.NavigationBar.Styles.General.TotalNavHeight    
