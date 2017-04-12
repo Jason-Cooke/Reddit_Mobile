@@ -21,7 +21,11 @@ export default class App extends Component {
     
     const store = configureStore(); // Create instance of store on render
     persistStore(store, { storage: AsyncStorage }); // method from redux-persist to store data in AsyncStorage
-    const { navBar, sceneStyle, navTitle } = styles;
+    const { 
+      navBar, 
+      sceneStyle, 
+      navTitle 
+    } = styles;
 
     return (
     <Provider store={ store }>    
