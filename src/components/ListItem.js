@@ -30,7 +30,6 @@ class ListItem extends Component {
   }
 
   render() {
-    const { titleStyle } = styles;
     const { 
       url, 
       id, 
@@ -46,7 +45,8 @@ class ListItem extends Component {
     } = this.props.item.data;
     const { data } = this.props.item;
     const bulletPoint = ' \u2022 ';
-    const { 
+    const {
+      titleStyle, 
       postInfo, 
       headerContentStyle, 
       headerTextStyle, 
