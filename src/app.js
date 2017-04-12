@@ -21,23 +21,27 @@ export default class App extends Component {
     
     const store = configureStore(); // Create instance of store on render
     persistStore(store, { storage: AsyncStorage }); // method from redux-persist to store data in AsyncStorage
+    const { navBar, sceneStyle, navTitle } = styles;
 
     return (
     <Provider store={ store }>    
-      <Router>
+      <Router 
+        navigationBarStyle={ navBar }
+        titleStyle={ navTitle }
+      >
         <Scene key="root">
           <Scene 
             key="mainScreen" 
             component={ ItemsList } 
             title="trending" 
             initial={ true } 
-            sceneStyle={ styles.sceneStyle }
+            sceneStyle={ sceneStyle }
           />
           <Scene 
             key="selectedItem" 
             component={ SelectedItem } 
             title="SelectedItem" 
-            sceneStyle={ styles.sceneStyle }
+            sceneStyle={ sceneStyle }
           />
         </Scene>
       </Router>
@@ -51,6 +55,15 @@ This style was created in order to fix issue of the NavBar overlaying content on
 https://github.com/aksonov/react-native-router-flux/issues/103
 */
 const styles = {
+  navTitle: {
+    color: '#657786', // changing navbar title color
+    fontWeight: 'bold',
+    fontSize: 18
+  },
+  navBar: {
+    flex: 1,
+    backgroundColor: '#f5f8fa', // changing navbar color
+  },
   sceneStyle: {
     paddingTop: Navigator.NavigationBar.Styles.General.TotalNavHeight    
   }
