@@ -27,7 +27,7 @@ Reddit Mobile is a mobile version of [reddit](https://www.reddit.com/) using the
 
 **Bonus Points:**
 
-- [x] Be able to store the fetched content locally so that if you relaunch the app, it will display that content first before fetching for new content. I recommend using Redux Persist or AsyncStorage.
+- [x] Be able to store the fetched content locally so that if you relaunch the app, it will display that content first before fetching for new content, using Redux Persist. 
 - [ ] Works on both iOS and Android.
 
 ## Libraries used and why I chose them
