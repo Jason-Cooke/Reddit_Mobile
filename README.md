@@ -60,7 +60,6 @@ Reddit Mobile is a mobile version of [reddit](https://www.reddit.com/) using the
     
 ## Todo
 - Verify app works on Android platform
-- Improve header UI component
 - The refresh feature works, but I plan to refactor to keep state of list on refresh
 
 ## Miscellaneous
