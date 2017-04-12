@@ -50,10 +50,6 @@ export default class App extends Component {
   }
 }
 
-/*
-This style was created in order to fix issue of the NavBar overlaying content on the screen
-https://github.com/aksonov/react-native-router-flux/issues/103
-*/
 const styles = {
   navTitle: {
     color: '#657786', // changing navbar title color
@@ -68,4 +64,7 @@ const styles = {
     paddingTop: Navigator.NavigationBar.Styles.General.TotalNavHeight    
   }
 };
-
+/*
+sceneStyle was created in order to fix issue of the NavBar overlaying content on the screen
+https://github.com/aksonov/react-native-router-flux/issues/103
+*/
